@@ -116,6 +116,6 @@ int main() {
 
     while (!WindowShouldClose()) {
         //std::cerr << real_min << ' ' << real_max << ' ' << img_min << ' ' << img_max << ' ' << tint << '\n';
-        Tick();
+        //Tick();
     }
 }
