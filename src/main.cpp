@@ -59,6 +59,9 @@ void Update() {
     else if (IsKeyDown(KEY_UP)) {
         //auto [posX, posY] = GetMousePosition();
 
+        double deltaX = posX / WIDTH
+               deltaY = posY / HEIGHT,
+
         real_min += ZOOM_STEP;
         real_max -= ZOOM_STEP;
         img_min += ZOOM_STEP;
