@@ -71,8 +71,9 @@ void Update() {
         }
 
         if (down &&
-        real_min >= REAL_MIN && real_max <= REAL_MAX && 
-            img_min >= IMG_MIN && img_max <= IMG_MAX) {
+            real_min >= REAL_MIN && real_max <= REAL_MAX && 
+            img_min >= IMG_MIN && img_max <= IMG_MAX
+        ) {
             real_min -= ZOOM_STEP * deltaX;
             real_max += ZOOM_STEP * (1 - deltaX);
             img_min -= ZOOM_STEP * deltaY;
