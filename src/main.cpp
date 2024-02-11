@@ -21,7 +21,7 @@ void Draw() {
             int it = Mand(c);
             int color = 255 - (it * 255 / ITER);
 
-            cerr << it << ' ' << color << '\n';
+            std::cerr << it << ' ' << color << '\n';
 
             DrawPixel(x, y, {
                 (unsigned char)color, 
