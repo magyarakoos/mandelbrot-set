@@ -17,10 +17,6 @@ double
 float tint = TINT;
 
 void Draw() {
-    BeginDrawing();
-    
-    std::cerr << "DRAW\n";
-
     for (int x = 0; x < WIDTH; x++) {
         for (int y = 0; y < HEIGHT; y++) {
 
@@ -36,71 +32,44 @@ void Draw() {
 
             Color color = ColorFromHSV(hue * 360, 1.0f, 1.0f);
 
-            // std::cerr << it << ' ';
-            // std::cerr << real_min << ' ' << real_max << ' ' << img_min << ' ' << img_max << '\n';
-
             DrawPixel(x, y, color);
         }
     }
-
-    EndDrawing();
 }
 
-void Tick() {
-    bool update = 0;
-
+void Update() {
     if (IsKeyDown(KEY_RIGHT)) {
-        update = 1;
-        std::cerr << "RIGHT ";
-        tint += TINT_STEP;
+        tint += 0.02;
         if (tint > 1.0f) {
             tint = 0.0f;
         }
+
+        Draw();
     }
 
     else if (IsKeyDown(KEY_LEFT)) {
-        update = 1;
-        std::cerr << "LEFT ";
-        tint -= TINT_STEP;
+        tint -= ;
         if (tint < 0.0f) {
             tint = 1.0f;
         }
+
+        Draw();
     }
 
-    /*else if (IsKeyDown(KEY_UP)) {
-        update = 1;
+    else if (IsKeyDown(KEY_UP)) {
+
         auto [posX, posY] = GetMousePosition();
 
-        float deltaX = posX / WIDTH, 
-              deltaY = posY / HEIGHT;
+        
 
-        std::cerr << "UP ";
-        real_min += ZOOM_STEP * deltaX;
-        img_min += ZOOM_STEP * deltaY; 
-
-        real_max -= ZOOM_STEP * (WIDTH - deltaX);
-        img_max -= ZOOM_STEP * (HEIGHT - deltaY);
+        Draw();
     }
 
     else if (IsKeyDown(KEY_DOWN)) {
-        update = 1;
-        auto [posX, posY] = GetMousePosition();
 
-        float deltaX = posX / WIDTH, 
-              deltaY = posY / HEIGHT;
+        
 
-        std::cerr << "DOWN ";
-        real_min -= ZOOM_STEP * deltaX;
-        img_min -= ZOOM_STEP * deltaY; 
-
-        real_max += ZOOM_STEP * (WIDTH - deltaX);
-        img_max += ZOOM_STEP * (HEIGHT - deltaY);
-    }*/
-
-    if (true) {
         Draw();
-        std::cerr << "DRAWCALL ";
-        std::cerr << real_min << ' ' << real_max << ' ' << img_min << ' ' << img_max << '\n';
     }
 }
 
@@ -111,12 +80,14 @@ int main() {
     InitWindow(WIDTH, HEIGHT, TITLE);
 
     for (int i = 0; i < 2; i++) {
+        BeginDrawing();
         Draw();
+        EndDrawing();
     }
 
     while (!WindowShouldClose()) {
-        //Draw();
-        //std::cerr << real_min << ' ' << real_max << ' ' << img_min << ' ' << img_max << ' ' << tint << '\n';
-        Tick();
+        BeginDrawing();
+        Update();
+        EndDrawing();
     }
 }
