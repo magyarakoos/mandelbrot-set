@@ -17,6 +17,7 @@ struct Complex {
 
     constexpr Complex operator*() {
         return {
+            real * real - i * i,
             
         };
     }
