@@ -10,7 +10,7 @@ void Update() {
 }
 
 void Draw() {
-    
+
 }
 
 int main() {
@@ -21,8 +21,6 @@ int main() {
 
     SetTargetFPS(FPS);
     InitWindow(WIDTH, HEIGHT, TITLE);
-    
-    
 
     while (!WindowShouldClose()) {
         BeginDrawing();
@@ -30,6 +28,4 @@ int main() {
         Draw();
         EndDrawing();
     }
-
-    return 0;
 }
