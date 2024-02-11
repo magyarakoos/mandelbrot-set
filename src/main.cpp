@@ -20,7 +20,7 @@ void Draw() {
             int it = Mand(c);
             int color = 255 - (it * 255 / ITER);
 
-            DrawPixel(x, y, {}) 
+            DrawPixel(x, y, BLACK) 
         }
     }
 }
