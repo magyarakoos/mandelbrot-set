@@ -55,6 +55,12 @@ void Update() {
 
         Draw();
     }
+
+    else if (IsKeyDown(KEY_UP)) {
+        //auto [posX, posY] = GetMousePosition();
+
+        
+    }
 }
 
 int main() {
