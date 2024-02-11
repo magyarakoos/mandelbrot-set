@@ -18,8 +18,9 @@ void Draw() {
             };
 
             int it = Mand(c);
-
-            int color = 255 - (it * 255 / ITER); 
+            int color = 255 - (it * 255 / ITER);
+            
+             
         }
     }
 }
