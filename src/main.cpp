@@ -61,7 +61,8 @@ void Update() {
 
         real_min += ZOOM_STEP;
         real_max -= ZOOM_STEP;
-
+        img_min += ZOOM_STEP;
+        img_max -= ZOOM_STEP;
     }
 }
 
