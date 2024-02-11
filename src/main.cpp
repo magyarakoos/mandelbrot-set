@@ -13,9 +13,11 @@ long double
     img_max = IMG_MAX
 ;
 
+float tint = TINT;
+
 void Update() {
     if (IsMouseButtonPressed(MOUSE_BUTTON_FORWARD)) {
-        
+        tint = min(tint,)
     }
 }
 
@@ -31,7 +33,7 @@ void Draw() {
             int it = Mand(c);
 
             // map the iteration number to a color
-            float hue = fmod(fmod(static_cast<float>(it) / ITER, 1.0f) + TINT, 1.0f);
+            float hue = fmod(fmod(static_cast<float>(it) / ITER, 1.0f) + tint, 1.0f);
 
             Color color = ColorFromHSV(hue * 360, 1.0f, 1.0f);
 
