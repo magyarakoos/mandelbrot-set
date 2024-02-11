@@ -1,3 +1,4 @@
+#include <cmath>
 #include <raylib.h>
 #include <assert.h>
 #include <iostream>
