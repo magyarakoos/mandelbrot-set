@@ -48,14 +48,12 @@ void Draw() {
 
 void Tick() {
     bool up = 0;IsKeyDown(KEY_UP);
-    bool down = 0;IsKeyDown(KEY_DOWN);
-    bool left = 0;
-    bool right = 0;
+    bool down = 0;;
+    bool update = 0;
 
-    std::cerr << up << ' ' << down << ' ' << left << ' ' << right << '\n';
-    return;
 
     if (IsKeyDown(KEY_RIGHT)) {
+        update = 1;
         std::cerr << "RIGHT ";
         /*tint += TINT_STEP;
         if (tint > 1.0f) {
@@ -63,7 +61,8 @@ void Tick() {
         }*/
     }
 
-    else if (left) {
+    else if (IsKeyDown(KEY_LEFT)) {
+        update = 1;
         std::cerr << "LEFT ";
         /*tint -= TINT_STEP;
         if (tint < 0.0f) {
@@ -71,7 +70,7 @@ void Tick() {
         }*/
     }
 
-    else if (up || down) {
+    else if (IsKeyDown(KEY_DOWN) || down) {
 
         /*auto [posX, posY] = GetMousePosition();
 
