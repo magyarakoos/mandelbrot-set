@@ -17,7 +17,9 @@ void Draw() {
                 IMG_MIN  + (y / HEIGHT) * (IMG_MAX - IMG_MIN)
             };
 
+            int it = Mand(c);
 
+            char 
         }
     }
 }
