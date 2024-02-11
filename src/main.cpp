@@ -18,9 +18,13 @@ void Draw() {
             };
 
             int it = Mand(c);
-            unsigned char color = 255 - (it * 255 / ITER);
+            int color = 255 - (it * 255 / ITER);
 
-            DrawPixel(x, y, {color, color, color, 255});
+            DrawPixel(x, y, 
+            {
+                (unsigned char)color, 
+                color, 
+                color, 255});
         }
     }
 }
