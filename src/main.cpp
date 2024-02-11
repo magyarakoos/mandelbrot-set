@@ -1,6 +1,7 @@
 #include <raylib.h>
 #include <assert.h>
 
+#include "mandelbrot.h"
 #include "settings.h"
 
 void Update() {
