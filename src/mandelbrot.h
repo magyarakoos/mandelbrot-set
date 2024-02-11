@@ -15,9 +15,9 @@ struct Complex {
         return *this = *this + c;
     }
 
-    constexpr Complex operator*(const Complex& c) {
+    constexpr Complex operator*() {
         return {
-            c.
-        }
+            
+        };
     }
 };
