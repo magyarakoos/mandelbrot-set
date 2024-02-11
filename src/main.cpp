@@ -1,6 +1,7 @@
 #include <raylib.h>
 #include <string>
 #include <time.h>
+#include <assert.h>
 
 int main() {
 
