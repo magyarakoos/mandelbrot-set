@@ -39,7 +39,7 @@ void Draw() {
 
 void Update() {
     if (IsKeyDown(KEY_RIGHT)) {
-        tint += 0.02;
+        tint += TINT_STEP;
         if (tint > 1.0f) {
             tint = 0.0f;
         }
@@ -48,7 +48,7 @@ void Update() {
     }
 
     else if (IsKeyDown(KEY_LEFT)) {
-        tint -= 0.02;
+        tint -= TINT_STEP;
         if (tint < 0.0f) {
             tint = 1.0f;
         }
