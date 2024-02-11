@@ -61,13 +61,25 @@ void Update() {
 
         double deltaX = posX / WIDTH,
                deltaY = posY / HEIGHT;
-        
-
-
+    
         real_min += ZOOM_STEP * deltaX;
         real_max -= ZOOM_STEP * (1 - deltaX);
         img_min += ZOOM_STEP * deltaY;
         img_max -= ZOOM_STEP * (1 - deltaY);
+
+        Draw();
+    }
+
+    else if (IsKeyDown(KEY_DOWN)) {
+        auto [posX, posY] = GetMousePosition();
+
+        double deltaX = posX / WIDTH,
+               deltaY = posY / HEIGHT;
+
+        real_min -= ZOOM_STEP * deltaX;
+        real_max += ZOOM_STEP * (1 - deltaX);
+        img_min -= ZOOM_STEP * deltaY;
+        img_max += ZOOM_STEP * (1 - deltaY);
 
         Draw();
     }
