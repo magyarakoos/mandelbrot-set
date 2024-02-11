@@ -14,10 +14,13 @@ int main() {
     SetTargetFPS(FPS);
     InitWindow(WIDTH, HEIGHT, TITLE);
     
-    Game game;
+    
 
-    while (!game.TriggerClose()) {
-        game.Tick();
+    while (!WindowShouldClose()) {
+            BeginDrawing();
+    Update();
+    Draw();
+    EndDrawing();
     }
 
     return 0;
