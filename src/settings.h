@@ -15,7 +15,7 @@ inline constexpr long double
 
 inline constexpr float
     // red: 0.0f
-    tint = 0.5f
+    TINT = 0.5f
 ;
 
 inline constexpr char
