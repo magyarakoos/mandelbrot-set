@@ -49,7 +49,7 @@ void Tick() {
     ;
 
     if (right) {
-        std::cell 
+        std::cerr << "RIGHT ";
         tint += TINT_STEP;
         if (tint > 1.0f) {
             tint = 0.0f;
@@ -57,6 +57,7 @@ void Tick() {
     }
 
     else if (left) {
+        std::cerr << "LEFT ";
         tint -= TINT_STEP;
         if (tint < 0.0f) {
             tint = 1.0f;
@@ -71,6 +72,7 @@ void Tick() {
               deltaY = posY / HEIGHT;
 
         if (up) {
+            std::cerr << "UP ";
             real_min += ZOOM_STEP * deltaX;
             img_min += ZOOM_STEP * deltaY; 
 
@@ -79,6 +81,7 @@ void Tick() {
         }
 
         else if (down) {
+            std::cerr << "DOWN ";
             real_min -= ZOOM_STEP * deltaX;
             img_min -= ZOOM_STEP * deltaY; 
 
@@ -90,6 +93,8 @@ void Tick() {
 
     if (up || down || left || right) {
         Draw();
+        std::cerr << "DRAWCALL ";
+        std::cerr << 
     }
 }
 
