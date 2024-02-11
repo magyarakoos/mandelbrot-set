@@ -1,6 +1,6 @@
 
 inline constexpr int
-    FPS = 60,
+    FPS = 144,
     WIDTH = 1000,
     HEIGHT = 1000,
     ITER = 100
