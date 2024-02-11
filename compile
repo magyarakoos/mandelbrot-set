@@ -2,10 +2,10 @@
 
 g++ -o main src/*.cpp
     -std=c++20 
+    -fsanitize=undefined 
+    -O3
     -Wall 
     -Wextra 
     -Werror 
-    -fsanitize=undefined 
-    -O3
 
 ./main
