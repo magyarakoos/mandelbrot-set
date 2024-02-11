@@ -6,6 +6,11 @@
 #include "mandelbrot.h"
 #include "settings.h"
 
+long double
+    real_min = REAL_MIN,
+    real_max = REAL_MAX,
+    
+
 void Update() {
 
 }
