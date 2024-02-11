@@ -1,6 +1,4 @@
 #include <raylib.h>
-#include <string>
-#include <time.h>
 #include <assert.h>
 
 #include "settings.h"
@@ -19,9 +17,6 @@ void Draw() {
 }
 
 int main() {
-
-    srand((unsigned)time(nullptr));
-
     assert(!GetWindowHandle());
 
     SetTargetFPS(FPS);
