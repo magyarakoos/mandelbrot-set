@@ -94,7 +94,7 @@ void Tick() {
     if (up || down || left || right) {
         Draw();
         std::cerr << "DRAWCALL ";
-        std::cerr << 
+        std::cerr << real_min << ' ' << real_max << ' ' << img_min << ' ' << img_max << '\n';
     }
 }
 
