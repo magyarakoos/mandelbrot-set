@@ -7,10 +7,10 @@ inline constexpr int
 ;
 
 inline constexpr long double
-    REAL_MIN = -2,
-    REAL_MAX = 2,
-    IMG_MIN = -2,
-    IMG_MAX = 2
+    REAL_MIN = -0.1,
+    REAL_MAX = 0.1,
+    IMG_MIN = -0.1,
+    IMG_MAX = 0.1
 ;
 
 inline constexpr float
