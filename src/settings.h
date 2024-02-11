@@ -1,3 +1,5 @@
 
-inline constexpr int FPS = 60;
-inline constexpr int WIDTH
+inline constexpr int
+    FPS = 60,
+    WIDTH = 440,
+    
