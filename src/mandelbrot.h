@@ -7,7 +7,8 @@ struct Complex {
     constexpr Complex operator+(const Complex& c) const {
 
         return {
-            *this.real + c.real,
+            real + c.real,
+            i + c.i
         };
     }
 };
