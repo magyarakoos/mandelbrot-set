@@ -23,7 +23,7 @@ void Draw() {
 
             std::cerr << it << ' ' << color << '\n';
 
-            DrawPixel(x, y, {
+            DrawPixel(x + 150, y + 2, {
                 (unsigned char)color, 
                 (unsigned char)color, 
                 (unsigned char)color, 
@@ -37,7 +37,7 @@ int main() {
     assert(!GetWindowHandle());
 
     SetTargetFPS(FPS);
-    InitWindow(WIDTH, HEIGHT, TITLE);
+    InitWindow(1000, 1000, TITLE);
 
     while (!WindowShouldClose()) {
         BeginDrawing();
