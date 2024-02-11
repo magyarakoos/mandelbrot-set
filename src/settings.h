@@ -9,8 +9,8 @@ inline constexpr int
 inline constexpr long double
     REAL_MIN = -2,
     REAL_MAX = 2,
-    COMPLEX_MIN = -2,
-    COMPLEX_MAX = 2
+    IMG_MIN = -2,
+    IMG_MAX = 2
 ;
 
 inline constexpr char
