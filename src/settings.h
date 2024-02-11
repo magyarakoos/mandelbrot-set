@@ -1,12 +1,12 @@
 
 inline constexpr int
     FPS = 60,
-    ITER = 25
+    ITER = 50
 ;
 
 inline constexpr double
-    WIDTH = 500,
-    HEIGHT = 500,
+    WIDTH = 800,
+    HEIGHT = 800,
     REAL_MIN = -2,
     REAL_MAX = 2,
     IMG_MIN = -2,
