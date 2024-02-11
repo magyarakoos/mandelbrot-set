@@ -59,7 +59,9 @@ void Update() {
     else if (IsKeyDown(KEY_UP)) {
         //auto [posX, posY] = GetMousePosition();
 
-        
+        real_min += ZOOM_STEP;
+        real_max -= ZOOM_STEP;
+
     }
 }
 
