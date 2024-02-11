@@ -1,4 +1,5 @@
 #include <cmath>
+#include <stdlib.h>
 #include <raylib.h>
 #include <assert.h>
 #include <iostream>
@@ -17,7 +18,7 @@ float tint = TINT;
 
 void Update() {
     if (IsMouseButtonPressed(MOUSE_BUTTON_FORWARD)) {
-        tint = min(tint,)
+        tint = min(1, tint + 0.01);
     }
 }
 
