@@ -6,6 +6,7 @@ g++ -o main src/*.cpp \
     -O3 \
     -Wall \
     -Wextra \
-    -Werror
+    -Werror \
+    -lraylib
 
 ./main
