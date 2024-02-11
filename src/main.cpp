@@ -63,6 +63,8 @@ void Update() {
             deltaY = GetMouseY() / HEIGHT;
 
         if (up) {
+            if ()
+
             real_min += ZOOM_STEP * deltaX;
             real_max -= ZOOM_STEP * (1 - deltaX);
             img_min += ZOOM_STEP * deltaY;
