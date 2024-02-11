@@ -42,6 +42,9 @@ void Draw() {
 }
 
 void Tick() {
+    bool up = IsKeyDown(KEY_UP), 
+         down = IsKeyDown(KEY_DOWN),
+
     if (IsKeyDown(KEY_RIGHT)) {
         tint += TINT_STEP;
         if (tint > 1.0f) {
@@ -60,7 +63,6 @@ void Tick() {
         Draw();
     }
 
-    bool up = IsKeyDown(KEY_UP), down = IsKeyDown(KEY_DOWN),
 
     else if () {
 
