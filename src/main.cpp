@@ -12,7 +12,7 @@ int main() {
     assert(!GetWindowHandle());
 
     SetTargetFPS(FPS);
-    InitWindow(WIDTH, HEIGHT, TITLE.c_str());
+    InitWindow(WIDTH, HEIGHT, TITLE);
     
     Game game;
 
