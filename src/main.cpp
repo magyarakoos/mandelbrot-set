@@ -21,8 +21,8 @@ void Draw() {
         for (int y = 0; y < HEIGHT; y++) {
 
             Complex c {
-                real_min + (x / static_cast<double>(WIDTH)) * (real_max - real_min),
-                img_min  + (y / static_cast<double>(HEIGHT)) * (img_max - img_min)
+                real_min + (x / WIDTH) * (real_max - real_min),
+                img_min  + (y / HEIGHT) * (img_max - img_min)
             };
 
             int it = Mand(c);
@@ -38,49 +38,46 @@ void Draw() {
 }
 
 void Update() {
-    if (IsKeyDown(KEY_RIGHT)) {
+    bool right = IsKeyDown(KEY_RIGHT),
+         left = IsKeyDown(KEY_LEFT),
+         up = IsKeyDown(KEY_UP),
+         down = IsKeyDown(KEY_DOWN);
+
+    if (right) {
         tint += TINT_STEP;
         if (tint > 1.0f) {
             tint = 0.0f;
         }
-
-        Draw();
     }
 
-    else if (IsKeyDown(KEY_LEFT)) {
+    if (left) {
         tint -= TINT_STEP;
         if (tint < 0.0f) {
             tint = 1.0f;
         }
-
-        Draw();
     }
 
-    else if (IsKeyDown(KEY_UP)) {
-        auto [posX, posY] = GetMousePosition();
+    if (up != down) {
+        double 
+            deltaX = GetMouseX() / WIDTH,
+            deltaY = GetMouseY() / HEIGHT;
 
-        double deltaX = posX / WIDTH,
-               deltaY = posY / HEIGHT;
-    
-        real_min += ZOOM_STEP * deltaX;
-        real_max -= ZOOM_STEP * (1 - deltaX);
-        img_min += ZOOM_STEP * deltaY;
-        img_max -= ZOOM_STEP * (1 - deltaY);
+        if (up) {
+            real_min += ZOOM_STEP * deltaX;
+            real_max -= ZOOM_STEP * (1 - deltaX);
+            img_min += ZOOM_STEP * deltaY;
+            img_max -= ZOOM_STEP * (1 - deltaY);
+        }
 
-        Draw();
+        if (down) {
+            real_min -= ZOOM_STEP * deltaX;
+            real_max += ZOOM_STEP * (1 - deltaX);
+            img_min -= ZOOM_STEP * deltaY;
+            img_max += ZOOM_STEP * (1 - deltaY);
+        }
     }
 
-    else if (IsKeyDown(KEY_DOWN)) {
-        auto [posX, posY] = GetMousePosition();
-
-        double deltaX = posX / WIDTH,
-               deltaY = posY / HEIGHT;
-
-        real_min -= ZOOM_STEP * deltaX;
-        real_max += ZOOM_STEP * (1 - deltaX);
-        img_min -= ZOOM_STEP * deltaY;
-        img_max += ZOOM_STEP * (1 - deltaY);
-
+    if (right || left || up || down) {
         Draw();
     }
 }
@@ -96,7 +93,7 @@ int main() {
         Draw();
         EndDrawing();
     }
-
+    
     while (!WindowShouldClose()) {
         BeginDrawing();
         Update();
