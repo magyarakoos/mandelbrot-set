@@ -68,7 +68,7 @@ void Tick() {
         }
     }
 
-    else if (up || down) {
+    else if (false) {
 
         auto [posX, posY] = GetMousePosition();
 
