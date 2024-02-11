@@ -6,7 +6,7 @@ inline constexpr int
     ITER = 100
 ;
 
-inline constexpr double
+inline constexpr long double
     REAL_MIN = -2,
     REAL_MAX = 2,
     IMG_MIN = -2,

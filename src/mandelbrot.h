@@ -1,8 +1,8 @@
 #pragma once
 
 struct Complex {
-    double real;
-    double i;
+    long double real;
+    long double i;
 
     constexpr Complex operator+(const Complex& c) const {
         return {

@@ -7,7 +7,7 @@
 #include "mandelbrot.h"
 #include "settings.h"
 
-double
+long double
     real_min = REAL_MIN,
     real_max = REAL_MAX,
     img_min = IMG_MIN,
@@ -21,8 +21,8 @@ void Draw() {
         for (int y = 0; y < HEIGHT; y++) {
 
             Complex c {
-                real_min + (x / static_cast<double>(WIDTH)) * (real_max - real_min),
-                img_min  + (y / static_cast<double>(HEIGHT)) * (img_max - img_min)
+                real_min + (x / static_cast<long double>(WIDTH)) * (real_max - real_min),
+                img_min  + (y / static_cast<long double>(HEIGHT)) * (img_max - img_min)
             };
 
             int it = Mand(c);
