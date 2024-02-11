@@ -70,27 +70,27 @@ void Tick() {
 
     else if (up || down) {
 
-        auto [posX, posY] = GetMousePosition();
+        /*auto [posX, posY] = GetMousePosition();
 
         float deltaX = posX / WIDTH, 
               deltaY = posY / HEIGHT;
-
+*/
         if (up) {
             std::cerr << "UP ";
-            real_min += ZOOM_STEP * deltaX;
+            /*real_min += ZOOM_STEP * deltaX;
             img_min += ZOOM_STEP * deltaY; 
 
             real_max -= ZOOM_STEP * (WIDTH - deltaX);
-            img_max -= ZOOM_STEP * (HEIGHT - deltaY);
+            img_max -= ZOOM_STEP * (HEIGHT - deltaY);*/
         }
 
         else if (down) {
             std::cerr << "DOWN ";
-            real_min -= ZOOM_STEP * deltaX;
+            /*real_min -= ZOOM_STEP * deltaX;
             img_min -= ZOOM_STEP * deltaY; 
 
             real_max += ZOOM_STEP * (WIDTH - deltaX);
-            img_max += ZOOM_STEP * (HEIGHT - deltaY);
+            img_max += ZOOM_STEP * (HEIGHT - deltaY);*/
         }
 
     }
