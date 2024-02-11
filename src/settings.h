@@ -1,7 +1,7 @@
 
 inline constexpr int
     FPS = 60,
-    ITER = 150
+    ITER = 50
 ;
 
 inline constexpr double
