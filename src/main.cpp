@@ -114,6 +114,7 @@ int main() {
     }
 
     while (!WindowShouldClose()) {
+        std::cerr << "BOEING\n";
         Tick();
     }
 }
