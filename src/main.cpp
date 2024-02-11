@@ -14,7 +14,9 @@ long double
 ;
 
 void Update() {
-
+    if (IsMouseButtonPressed(MOUSE_BUTTON_FORWARD)) {
+        
+    }
 }
 
 void Draw() {
