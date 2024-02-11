@@ -24,7 +24,9 @@ void Draw() {
             {
                 (unsigned char)color, 
                 color, 
-                color, 255});
+                color, 
+                255
+            });
         }
     }
 }
