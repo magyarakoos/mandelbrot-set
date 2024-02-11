@@ -52,6 +52,9 @@ void Tick() {
     bool left = IsKeyDown(KEY_LEFT);
     bool right = IsKeyDown(KEY_RIGHT);
 
+    std::cerr << up << ' ' << down << ' ' << left << ' ' << right << '\n';
+    return;
+
     if (right) {
         std::cerr << "RIGHT ";
         /*tint += TINT_STEP;
