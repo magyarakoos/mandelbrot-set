@@ -67,7 +67,7 @@ void Tick() {
         }
     }
 
-    else if (IsKeyDown(KEY_UP)) {
+    /*else if (IsKeyDown(KEY_UP)) {
         update = 1;
         auto [posX, posY] = GetMousePosition();
 
