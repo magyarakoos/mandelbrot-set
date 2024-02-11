@@ -1,5 +1,6 @@
 #include <raylib.h>
 #include <assert.h>
+#include <iostream>
 
 #include "mandelbrot.h"
 #include "settings.h"
@@ -20,11 +21,12 @@ void Draw() {
             int it = Mand(c);
             int color = 255 - (it * 255 / ITER);
 
-            DrawPixel(x, y, 
-            {
+            cerr << it << ' ' << color << '\n';
+
+            DrawPixel(x, y, {
                 (unsigned char)color, 
-                color, 
-                color, 
+                (unsigned char)color, 
+                (unsigned char)color, 
                 255
             });
         }
