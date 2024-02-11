@@ -80,15 +80,6 @@ void Tick() {
 
         real_max -= ZOOM_STEP * (WIDTH - deltaX);
         img_max -= ZOOM_STEP * (HEIGHT - deltaY);*/
-
-        else if (IsKeyPressed(KEY_DOWN)) {
-            std::cerr << "DOWN ";
-            /*real_min -= ZOOM_STEP * deltaX;
-            img_min -= ZOOM_STEP * deltaY; 
-
-            real_max += ZOOM_STEP * (WIDTH - deltaX);
-            img_max += ZOOM_STEP * (HEIGHT - deltaY);*/
-        }
     }
 
     else if (IsKeyPressed(KEY_DOWN)) {
@@ -97,7 +88,6 @@ void Tick() {
 
         float deltaX = posX / WIDTH, 
               deltaY = posY / HEIGHT;
-
 
         std::cerr << "DOWN ";
         /*real_min -= ZOOM_STEP * deltaX;
