@@ -65,9 +65,9 @@ void Update() {
 
 
         real_min += ZOOM_STEP * deltaX;
-        real_max -= ZOOM_STEP * ()
+        real_max -= ZOOM_STEP * (1 - deltaX);
         img_min += ZOOM_STEP * deltaY;
-        img_max -= ZOOM_STEP;
+        img_max -= ZOOM_STEP * (1 - deltaY);
 
         Draw();
     }
