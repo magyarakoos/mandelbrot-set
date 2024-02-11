@@ -67,13 +67,13 @@ void Tick() {
         }*/
     }
 
-    else if (IsKeyPressed(KEY_DOWN) || IsKeyPressed(KEY_UP)) {
+    else if (IsKeyPressed(KEY_UP)) {
         update = 1;
-        /*auto [posX, posY] = GetMousePosition();
+        auto [posX, posY] = GetMousePosition();
 
         float deltaX = posX / WIDTH, 
               deltaY = posY / HEIGHT;
-*/
+
         if (IsKeyPressed(KEY_UP)) {
             std::cerr << "UP ";
             /*real_min += ZOOM_STEP * deltaX;
@@ -112,7 +112,6 @@ int main() {
     }
 
     while (!WindowShouldClose()) {
-        std::cerr << "BOEING\n";
         Tick();
     }
 }
