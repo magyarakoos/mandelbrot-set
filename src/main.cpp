@@ -19,7 +19,7 @@ void Draw() {
 
             int it = Mand(c);
 
-            unsigned char 
+            int color = 255 - (it * 255 / ITER); 
         }
     }
 }
