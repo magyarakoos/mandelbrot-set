@@ -13,8 +13,8 @@ void Draw() {
         for (int y = 0; y < HEIGHT; y++) {
 
             Complex c {
-                REAL_MIN + (x / WIDTH) *,
-                IMG_MIN  + (y / HEIGHT) *
+                REAL_MIN + (x / WIDTH) * (REAL_MAX - REAL_MIN),
+                IMG_MIN  + (y / HEIGHT) * (IMG_MAX - IMG_MIN)
             };
 
 
