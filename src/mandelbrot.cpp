@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 #include "mandelbrot.h"
 #include "settings.h"
 
