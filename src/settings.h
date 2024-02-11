@@ -9,7 +9,9 @@ inline constexpr int
 inline constexpr long double
     REAL_MIN = -2,
     REAL_MAX = 2,
-    COMPLEX_
+    COMPLEX_MIN = -2,
+    COMPLEX_MAX = 2
+;
 
 inline constexpr char
     TITLE[] = "Mandelbrot Set"
