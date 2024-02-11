@@ -17,6 +17,8 @@ double
 float tint = TINT;
 
 void Draw() {
+    BeginDrawing();
+    
     for (int x = 0; x < WIDTH; x++) {
         for (int y = 0; y < HEIGHT; y++) {
 
@@ -35,9 +37,11 @@ void Draw() {
             DrawPixel(x, y, color);
         }
     }
+
+    EndDrawing();
 }
 
-void Update() {
+void Tick() {
     if (IsKeyDown(KEY_RIGHT)) {
         tint += TINT_STEP;
         if (tint > 1.0f) {
@@ -80,14 +84,10 @@ int main() {
     InitWindow(WIDTH, HEIGHT, TITLE);
 
     for (int i = 0; i < 2; i++) {
-        BeginDrawing();
         Draw();
-        EndDrawing();
     }
 
     while (!WindowShouldClose()) {
-        BeginDrawing();
-        Update();
-        EndDrawing();
+        Tick();
     }
 }
