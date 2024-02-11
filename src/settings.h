@@ -11,7 +11,7 @@ inline constexpr double
     REAL_MAX = 2,
     IMG_MIN = -2,
     IMG_MAX = 2,
-    ZOOM_STEP = 0.05
+    ZOOM_STEP = 0.02
 ;
 
 inline constexpr float
