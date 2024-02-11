@@ -37,7 +37,7 @@ int main() {
     assert(!GetWindowHandle());
 
     SetTargetFPS(1);
-    InitWindow(1000, 1000, TITLE);
+    InitWindow(WIDTH, HEIGH, TITLE);
 
     while (!WindowShouldClose()) {
         BeginDrawing();
