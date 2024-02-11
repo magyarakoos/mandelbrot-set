@@ -27,3 +27,4 @@ struct Complex {
         return *this = *this * c;
     }
 };
+
