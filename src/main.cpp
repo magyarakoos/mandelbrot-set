@@ -3,6 +3,8 @@
 #include <time.h>
 #include <assert.h>
 
+#include "settings.h"
+
 int main() {
 
     srand((unsigned)time(nullptr));

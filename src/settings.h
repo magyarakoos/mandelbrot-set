@@ -5,3 +5,7 @@ inline constexpr int
     HEIGHT = 440,
     ITER = 100
 ;
+
+inline constexpr char
+    TITLE[] = "Mandelbrot Set"
+;
