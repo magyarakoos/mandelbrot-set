@@ -95,7 +95,7 @@ void Tick() {
 
         real_max += ZOOM_STEP * (WIDTH - deltaX);
         img_max += ZOOM_STEP * (HEIGHT - deltaY);
-    }
+    }*/
 
     if (true) {
         Draw();
