@@ -18,8 +18,8 @@ struct Complex {
     constexpr Complex operator*(const Complex& c) {
         // (a + bi)^2 = (a2 − b2) + 2abi
         return {
-            real * real - i * i,
-            2 * real * i
+            real * c.real - i * c.i,
+            real * i + 
         };
     }
 };
