@@ -19,7 +19,16 @@ float tint = TINT;
 void Update() {
     if (IsMouseButtonPressed(MOUSE_BUTTON_FORWARD)) {
         tint += 0.01;
-        
+        if (tint > 1.0f) {
+            tint = 1.0f;
+        }
+    }
+
+    if (IsMouseButtonPressed(MOUSE_BUTTON_BACK)) {
+        tint += 0.01;
+        if (tint > 1.0f) {
+            tint = 1.0f;
+        }
     }
 }
 
