@@ -38,8 +38,8 @@ void Draw() {
 }
 
 void Update() {
-    if (IsKeyDown(KEY_RIGHT)) {
-        tint += 0.02;
+    if (IsKeyPressed(KEY_RIGHT)) {
+        tint += TINT_STEP;
         if (tint > 1.0f) {
             tint = 0.0f;
         }
@@ -47,27 +47,11 @@ void Update() {
         Draw();
     }
 
-    else if (IsKeyDown(KEY_LEFT)) {
-        tint -= ;
+    else if (IsKeyPressed(KEY_LEFT)) {
+        tint -= TINT_STEP;
         if (tint < 0.0f) {
             tint = 1.0f;
         }
-
-        Draw();
-    }
-
-    else if (IsKeyDown(KEY_UP)) {
-
-        auto [posX, posY] = GetMousePosition();
-
-        
-
-        Draw();
-    }
-
-    else if (IsKeyDown(KEY_DOWN)) {
-
-        
 
         Draw();
     }
