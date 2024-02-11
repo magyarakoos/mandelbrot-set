@@ -47,7 +47,6 @@ void Draw() {
 }
 
 void Tick() {
-    std::cerr << "BOEING\n";
     bool update = 0;
 
     if (IsKeyDown(KEY_RIGHT)) {

@@ -1,9 +1,9 @@
 
 inline constexpr int
-    FPS = 60,
-    WIDTH = 1000,
-    HEIGHT = 1000,
-    ITER = 200
+    FPS = 10,
+    WIDTH = 200,
+    HEIGHT = 200,
+    ITER = 100
 ;
 
 inline constexpr double
