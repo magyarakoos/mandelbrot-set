@@ -74,14 +74,12 @@ void Tick() {
         float deltaX = posX / WIDTH, 
               deltaY = posY / HEIGHT;
 
-        if (IsKeyPressed(KEY_UP)) {
-            std::cerr << "UP ";
-            /*real_min += ZOOM_STEP * deltaX;
-            img_min += ZOOM_STEP * deltaY; 
+        std::cerr << "UP ";
+        /*real_min += ZOOM_STEP * deltaX;
+        img_min += ZOOM_STEP * deltaY; 
 
-            real_max -= ZOOM_STEP * (WIDTH - deltaX);
-            img_max -= ZOOM_STEP * (HEIGHT - deltaY);*/
-        }
+        real_max -= ZOOM_STEP * (WIDTH - deltaX);
+        img_max -= ZOOM_STEP * (HEIGHT - deltaY);*/
 
         else if (IsKeyPressed(KEY_DOWN)) {
             std::cerr << "DOWN ";
@@ -91,7 +89,22 @@ void Tick() {
             real_max += ZOOM_STEP * (WIDTH - deltaX);
             img_max += ZOOM_STEP * (HEIGHT - deltaY);*/
         }
+    }
 
+    else if (IsKeyPressed(KEY_DOWN)) {
+        update = 1;
+        auto [posX, posY] = GetMousePosition();
+
+        float deltaX = posX / WIDTH, 
+              deltaY = posY / HEIGHT;
+
+
+            std::cerr << "DOWN ";
+            /*real_min -= ZOOM_STEP * deltaX;
+            img_min -= ZOOM_STEP * deltaY; 
+
+            real_max += ZOOM_STEP * (WIDTH - deltaX);
+            img_max += ZOOM_STEP * (HEIGHT - deltaY);*/
     }
 
     if (update) {
