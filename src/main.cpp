@@ -5,6 +5,14 @@
 
 #include "settings.h"
 
+void Update() {
+
+}
+
+void Draw() {
+    
+}
+
 int main() {
 
     srand((unsigned)time(nullptr));
