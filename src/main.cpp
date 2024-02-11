@@ -19,6 +19,8 @@ float tint = TINT;
 void Draw() {
     BeginDrawing();
     
+    std::cerr << "DRAW\n";
+
     for (int x = 0; x < WIDTH; x++) {
         for (int y = 0; y < HEIGHT; y++) {
 
@@ -33,6 +35,9 @@ void Draw() {
             float hue = fmod(fmod(static_cast<float>(it) / ITER, 1.0f) + tint, 1.0f);
 
             Color color = ColorFromHSV(hue * 360, 1.0f, 1.0f);
+
+            std::cerr << it << ' ';
+            std::cerr << real_min << ' ' << real_max << ' ' << img_min << ' ' << img_max << '\n';
 
             DrawPixel(x, y, color);
         }
