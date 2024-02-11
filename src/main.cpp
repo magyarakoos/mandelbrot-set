@@ -55,14 +55,14 @@ void Tick() {
         }
     }
 
-    if (IsKeyDown(KEY_LEFT)) {
+    else if (IsKeyDown(KEY_LEFT)) {
         tint -= TINT_STEP;
         if (tint < 0.0f) {
             tint = 1.0f;
         }
     }
 
-    if (up || down) {
+    else if (up || down) {
 
         auto [posX, posY] = GetMousePosition();
 
@@ -77,7 +77,7 @@ void Tick() {
             img_max -= ZOOM_STEP * (HEIGHT - deltaY);
         }
 
-        if (down) {
+        else if (down) {
             real_min -= ZOOM_STEP * deltaX;
             img_min -= ZOOM_STEP * deltaY; 
 
