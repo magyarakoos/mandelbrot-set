@@ -99,12 +99,12 @@ void Tick() {
               deltaY = posY / HEIGHT;
 
 
-            std::cerr << "DOWN ";
-            /*real_min -= ZOOM_STEP * deltaX;
-            img_min -= ZOOM_STEP * deltaY; 
+        std::cerr << "DOWN ";
+        /*real_min -= ZOOM_STEP * deltaX;
+        img_min -= ZOOM_STEP * deltaY; 
 
-            real_max += ZOOM_STEP * (WIDTH - deltaX);
-            img_max += ZOOM_STEP * (HEIGHT - deltaY);*/
+        real_max += ZOOM_STEP * (WIDTH - deltaX);
+        img_max += ZOOM_STEP * (HEIGHT - deltaY);*/
     }
 
     if (update) {
