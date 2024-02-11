@@ -22,6 +22,8 @@ void Update() {
         if (tint > 1.0f) {
             tint = 1.0f;
         }
+
+        
     }
 
     else if (IsMouseButtonPressed(KEY_DOWN)) {
