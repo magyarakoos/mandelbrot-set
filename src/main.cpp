@@ -56,7 +56,14 @@ void Update() {
         Draw();
     }
 
-    else if (IsKeyDown())
+    else if (IsKeyDown(KEY_UP)) {
+
+    }
+
+    else if (IsKeyDown(KEY_DOWN)) {
+
+        Draw();
+    }
 }
 
 int main() {
