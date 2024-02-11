@@ -26,5 +26,7 @@ struct Complex {
     constexpr Complex& operator*=(const Complex& c) {
         return *this = *this * c;
     }
+
 };
 
+int Mand(const Complex& c);
