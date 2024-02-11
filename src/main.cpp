@@ -47,15 +47,15 @@ void Draw() {
 }
 
 void Tick() {
-    bool up = IsKeyDown(KEY_UP);
-    bool down = IsKeyDown(KEY_DOWN);
-    bool left = IsKeyDown(KEY_LEFT);
-    bool right = IsKeyDown(KEY_RIGHT);
+    bool up = 0;IsKeyDown(KEY_UP);
+    bool down = 0;IsKeyDown(KEY_DOWN);
+    bool left = 0;
+    bool right = 0;
 
     std::cerr << up << ' ' << down << ' ' << left << ' ' << right << '\n';
     return;
 
-    if (right) {
+    if (IsKeyDown(KEY_RIGHT)) {
         std::cerr << "RIGHT ";
         /*tint += TINT_STEP;
         if (tint > 1.0f) {
