@@ -9,7 +9,9 @@
 long double
     real_min = REAL_MIN,
     real_max = REAL_MAX,
-    
+    img_min = IMG_MIN,
+    img_max = img_max
+;
 
 void Update() {
 
@@ -20,8 +22,8 @@ void Draw() {
         for (int y = 0; y < HEIGHT; y++) {
 
             Complex c {
-                REAL_MIN + (x / static_cast<long double>(WIDTH)) * (REAL_MAX - REAL_MIN),
-                IMG_MIN  + (y / static_cast<long double>(HEIGHT)) * (IMG_MAX - IMG_MIN)
+                real_min + (x / static_cast<long double>(WIDTH)) * (real_max - real_min),
+                img_min  + (y / static_cast<long double>(HEIGHT)) * (img_max - img_min)
             };
 
             int it = Mand(c);
