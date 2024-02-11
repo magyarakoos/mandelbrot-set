@@ -6,6 +6,9 @@ inline constexpr int
     ITER = 100
 ;
 
+inline constexpr long double
+    
+
 inline constexpr char
     TITLE[] = "Mandelbrot Set"
 ;
