@@ -58,7 +58,9 @@ void Update() {
 
     else if (IsKeyDown(KEY_UP)) {
 
-        GetMousePosition()
+        auto [posX, posY] = GetMousePosition();
+
+        
 
         Draw();
     }
