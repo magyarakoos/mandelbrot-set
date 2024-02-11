@@ -36,8 +36,8 @@ void Draw() {
 
             Color color = ColorFromHSV(hue * 360, 1.0f, 1.0f);
 
-            std::cerr << it << ' ';
-            std::cerr << real_min << ' ' << real_max << ' ' << img_min << ' ' << img_max << '\n';
+            // std::cerr << it << ' ';
+            // std::cerr << real_min << ' ' << real_max << ' ' << img_min << ' ' << img_max << '\n';
 
             DrawPixel(x, y, color);
         }
@@ -47,10 +47,10 @@ void Draw() {
 }
 
 void Tick() {
-    bool up = IsKeyDown(KEY_UP), 
-         down = IsKeyDown(KEY_DOWN),
-         left = IsKeyDown(KEY_LEFT),
-         right = IsKeyDown(KEY_RIGHT)
+    bool up = 0, //IsKeyDown(KEY_UP), 
+         down = 0, //IsKeyDown(KEY_DOWN),
+         left = 0, //IsKeyDown(KEY_LEFT),
+         right = 0, //IsKeyDown(KEY_RIGHT)
     ;
 
     if (right) {
