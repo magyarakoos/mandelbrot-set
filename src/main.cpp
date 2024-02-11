@@ -70,7 +70,8 @@ void Tick() {
               deltaY = posY / HEIGHT;
 
         if (up) {
-            REAL_MIN += S 
+            REAL_MIN += ZOOM_STEP * deltaX;
+            IMG_MIN +=  
         
         }
 
