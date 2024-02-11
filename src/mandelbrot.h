@@ -19,7 +19,7 @@ struct Complex {
         // (a + bi)^2 = (a2 − b2) + 2abi
         return {
             real * c.real - i * c.i,
-            real * i + 
+            real * i + c.real * c.i
         };
     }
 };
