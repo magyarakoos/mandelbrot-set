@@ -16,24 +16,6 @@ long double
 
 float tint = TINT;
 
-void Update() {
-    if (IsKeyPressed(KEY_UP)) {
-        tint += 0.01;
-        if (tint > 1.0f) {
-            tint = 1.0f;
-        }
-
-        
-    }
-
-    else if (IsMouseButtonPressed(KEY_DOWN)) {
-        tint -= 0.01;
-        if (tint < 0.0f) {
-            tint = 0.0f;
-        }
-    }
-}
-
 void Draw() {
     for (int x = 0; x < WIDTH; x++) {
         for (int y = 0; y < HEIGHT; y++) {
@@ -55,6 +37,25 @@ void Draw() {
     }
 }
 
+void Update() {
+    if (IsKeyPressed(KEY_UP)) {
+        tint += 0.01;
+        if (tint > 1.0f) {
+            tint = 1.0f;
+        }
+
+        Draw();
+    }
+
+    else if (IsMouseButtonPressed(KEY_DOWN)) {
+        tint -= 0.01;
+        if (tint < 0.0f) {
+            tint = 0.0f;
+        }
+
+        Draw();
+    }
+}
 
 int main() {
     assert(!GetWindowHandle());
