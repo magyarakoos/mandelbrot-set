@@ -63,10 +63,13 @@ int main() {
     SetTargetFPS(FPS);
     InitWindow(WIDTH, HEIGHT, TITLE);
 
+    BeginDrawing();
+    Draw();
+    EndDrawing();
+
     while (!WindowShouldClose()) {
         BeginDrawing();
         Update();
-        Draw();
         EndDrawing();
     }
 }
