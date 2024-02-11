@@ -5,4 +5,7 @@ g++ -o main src/*.cpp
     -Wall 
     -Wextra 
     -Werror 
-    -fsanitize=undefined -O3 -DLOCAL main.cpp
+    -fsanitize=undefined 
+    -O3
+
+./main
