@@ -22,4 +22,6 @@ struct Complex {
             real * i + c.real * c.i
         };
     }
+
+    constexpr 
 };
