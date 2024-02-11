@@ -13,6 +13,11 @@ inline constexpr long double
     IMG_MAX = 2
 ;
 
+inline constexpr float
+    // red: 0.0f
+    tint = 0.5f
+;
+
 inline constexpr char
     TITLE[] = "Mandelbrot Set"
 ;
