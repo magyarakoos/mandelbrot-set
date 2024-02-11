@@ -9,8 +9,8 @@ void Update() {
 }
 
 void Draw() {
-    for (int i = 0; i < HEIGHT; i++) {
-        for (int j = 0; j < WIDTH; j++) {
+    for (int x = 0; x < WIDTH; x++) {
+        for (int y = 0; y < WIDTH; y++) {
 
             Complex c {
                 REAL_MIN + (0),
