@@ -15,7 +15,7 @@ struct Complex {
         return *this = *this + c;
     }
 
-    constexpr Complex operator*(const Complex& c) {
+    constexpr Complex operator*(const Complex& c) const {
         // (ac − bd) + (ad + bc)i
         return {
             real * c.real - i * c.i,
@@ -23,5 +23,7 @@ struct Complex {
         };
     }
 
-    constexpr 
+    constexpr Complex& operator*=(const Complex& c) {
+
+    }
 };
