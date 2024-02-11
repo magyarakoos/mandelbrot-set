@@ -10,7 +10,7 @@ long double
     real_min = REAL_MIN,
     real_max = REAL_MAX,
     img_min = IMG_MIN,
-    img_max = img_max
+    img_max = IMG_MAX
 ;
 
 void Update() {
