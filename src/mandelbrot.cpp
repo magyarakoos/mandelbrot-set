@@ -11,6 +11,8 @@ int Mand(const Complex& c) {
         // f(z) = z^2 + c
         z *= z;
         z += c;
+
+        it++;
     }
 
     
