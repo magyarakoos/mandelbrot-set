@@ -10,12 +10,14 @@ void Update() {
 
 void Draw() {
     for (int x = 0; x < WIDTH; x++) {
-        for (int y = 0; y < WIDTH; y++) {
+        for (int y = 0; y < HEIGHT; y++) {
 
             Complex c {
-                REAL_MIN + (0),
+                REAL_MIN + (x / WIDTH),
                 IMG_MIN  + (0)
             };
+
+
         }
     }
 }
