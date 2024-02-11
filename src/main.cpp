@@ -17,10 +17,10 @@ int main() {
     
 
     while (!WindowShouldClose()) {
-            BeginDrawing();
-    Update();
-    Draw();
-    EndDrawing();
+        BeginDrawing();
+        Update();
+        Draw();
+        EndDrawing();
     }
 
     return 0;
