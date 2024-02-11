@@ -60,19 +60,21 @@ void Tick() {
         Draw();
     }
 
-    else if (IsKeyDown(KEY_UP)) {
+    bool up = IsKeyDown(KEY_UP), down = IsKeyDown(KEY_DOWN),
+
+    else if () {
 
         auto [posX, posY] = GetMousePosition();
 
         float deltaX = posX / WIDTH, 
               deltaY = posY / HEIGHT;
 
-        
+
 
         Draw();
     }
 
-    else if (IsKeyDown(KEY_DOWN)) {
+    else if () {
 
         
 
