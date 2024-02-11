@@ -73,7 +73,7 @@ void Tick() {
             real_min += ZOOM_STEP * deltaX;
             img_min += ZOOM_STEP * deltaY; 
 
-            
+            real_max -= ZOOM_STEP * ()
         }
 
         if (down) {
