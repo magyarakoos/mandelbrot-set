@@ -20,10 +20,8 @@ void Draw() {
             };
 
             int it = Mand(c);
-//          unsigned char color = 255 - (it * 255 / ITER);
 
-            float hue = fmod(static_cast<float>(it) / ITER, 1.0f);
-            hue = fmod(hue + TINT, 1.0f); // Adjust this value to control the blue-ish tint
+            float hue = fmod(fmod(static_cast<float>(it) / ITER, 1.0f) + TINT, 1.0f);
             Color color = ColorFromHSV(hue * 360, 1.0f, 1.0f);
 
             DrawPixel(x, y, color);
