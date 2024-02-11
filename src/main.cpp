@@ -1,5 +1,5 @@
 #include <cmath>
-#include <stdlib.h>
+#include <float.h>
 #include <raylib.h>
 #include <assert.h>
 #include <iostream>
@@ -75,6 +75,11 @@ void Update() {
             img_min -= ZOOM_STEP * deltaY;
             img_max += ZOOM_STEP * (1 - deltaY);
         }
+
+        real_min = std::max(real_min, REAL_MIN);
+        real_max = std::min(real_max, REAL_MAX);
+        img_min  = std::max(img_min, IMG_MIN);
+        img_max  = std::min(img_max, IMG_MAX);
     }
 
     if (right || left || up || down) {
