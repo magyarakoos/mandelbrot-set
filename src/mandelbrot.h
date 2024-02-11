@@ -16,7 +16,7 @@ struct Complex {
     }
 
     constexpr Complex operator*() {
-        // (a + bi)^2 = (a2−b2)+2abi
+        // (a + bi)^2 = (a2 − b2) + 2abi
         return {
             real * real - i * i,
             2 * real * i
