@@ -49,8 +49,7 @@ void Draw() {
 void Tick() {
     bool update = 0;
 
-
-    if (IsKeyDown(KEY_RIGHT)) {
+    if (IsKeyPressed(KEY_RIGHT)) {
         update = 1;
         std::cerr << "RIGHT ";
         /*tint += TINT_STEP;
@@ -59,7 +58,7 @@ void Tick() {
         }*/
     }
 
-    else if (IsKeyDown(KEY_LEFT)) {
+    else if (IsKeyPressed(KEY_LEFT)) {
         update = 1;
         std::cerr << "LEFT ";
         /*tint -= TINT_STEP;
@@ -68,14 +67,14 @@ void Tick() {
         }*/
     }
 
-    else if (IsKeyDown(KEY_DOWN) || IsKeyDown(KEY_UP)) {
+    else if (IsKeyPressed(KEY_DOWN) || IsKeyPressed(KEY_UP)) {
         update = 1;
         /*auto [posX, posY] = GetMousePosition();
 
         float deltaX = posX / WIDTH, 
               deltaY = posY / HEIGHT;
 */
-        if (IsKeyDown(KEY_UP)) {
+        if (IsKeyPressed(KEY_UP)) {
             std::cerr << "UP ";
             /*real_min += ZOOM_STEP * deltaX;
             img_min += ZOOM_STEP * deltaY; 
@@ -84,7 +83,7 @@ void Tick() {
             img_max -= ZOOM_STEP * (HEIGHT - deltaY);*/
         }
 
-        else if (IsKeyDown(KEY_DOWN)) {
+        else if (IsKeyPressed(KEY_DOWN)) {
             std::cerr << "DOWN ";
             /*real_min -= ZOOM_STEP * deltaX;
             img_min -= ZOOM_STEP * deltaY; 
