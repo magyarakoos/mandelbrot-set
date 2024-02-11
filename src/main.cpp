@@ -64,7 +64,10 @@ void Tick() {
 
         auto [posX, posY] = GetMousePosition();
 
-        float delta
+        float deltaX = posX / WIDTH, 
+              deltaY = posY / HEIGHT;
+
+        
 
         Draw();
     }
