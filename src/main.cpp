@@ -54,21 +54,21 @@ void Tick() {
 
     if (right) {
         std::cerr << "RIGHT ";
-        tint += TINT_STEP;
+        /*tint += TINT_STEP;
         if (tint > 1.0f) {
             tint = 0.0f;
-        }
+        }*/
     }
 
     else if (left) {
         std::cerr << "LEFT ";
-        tint -= TINT_STEP;
+        /*tint -= TINT_STEP;
         if (tint < 0.0f) {
             tint = 1.0f;
-        }
+        }*/
     }
 
-    else if (false) {
+    else if (up || down) {
 
         auto [posX, posY] = GetMousePosition();
 
