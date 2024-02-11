@@ -53,8 +53,6 @@ void Tick() {
         if (tint > 1.0f) {
             tint = 0.0f;
         }
-
-        Draw();
     }
 
     if (IsKeyDown(KEY_LEFT)) {
@@ -62,27 +60,22 @@ void Tick() {
         if (tint < 0.0f) {
             tint = 1.0f;
         }
-
-        Draw();
     }
 
-    if () {
+    if (up || down) {
 
         auto [posX, posY] = GetMousePosition();
 
         float deltaX = posX / WIDTH, 
               deltaY = posY / HEIGHT;
 
+        if (up) {
+            
+        }
 
+        if (down) {
 
-        Draw();
-    }
-
-    if () {
-
-        
-
-        Draw();
+        }
     }
 
     if (up || down || left || right) {
