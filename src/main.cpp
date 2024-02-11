@@ -47,10 +47,11 @@ void Draw() {
 }
 
 void Tick() {
-    bool up = 0, //IsKeyDown(KEY_UP), 
-         down = 0, //IsKeyDown(KEY_DOWN),
-         left = 0, //IsKeyDown(KEY_LEFT),
-         right = 0, //IsKeyDown(KEY_RIGHT)
+    bool up = IsKeyDown(KEY_UP);
+    bool down = 
+         down = IsKeyDown(KEY_DOWN),
+         left = IsKeyDown(KEY_LEFT),
+         right = 1 //IsKeyDown(KEY_RIGHT)
     ;
 
     if (right) {
