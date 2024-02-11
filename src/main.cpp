@@ -48,14 +48,14 @@ void Tick() {
          right = IsKeyDown(KEY_RIGHT)
     ;
 
-    if (IsKeyDown(KEY_RIGHT)) {
+    if (right) {
         tint += TINT_STEP;
         if (tint > 1.0f) {
             tint = 0.0f;
         }
     }
 
-    else if (IsKeyDown(KEY_LEFT)) {
+    else if (left) {
         tint -= TINT_STEP;
         if (tint < 0.0f) {
             tint = 1.0f;
