@@ -21,7 +21,9 @@ void Draw() {
 
             int it = Mand(c);
 
+            // map the iteration number to a color
             float hue = fmod(fmod(static_cast<float>(it) / ITER, 1.0f) + TINT, 1.0f);
+            
             Color color = ColorFromHSV(hue * 360, 1.0f, 1.0f);
 
             DrawPixel(x, y, color);
