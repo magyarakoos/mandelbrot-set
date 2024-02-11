@@ -97,7 +97,7 @@ void Tick() {
         img_max += ZOOM_STEP * (HEIGHT - deltaY);
     }
 
-    if (update) {
+    if (true) {
         Draw();
         std::cerr << "DRAWCALL ";
         std::cerr << real_min << ' ' << real_max << ' ' << img_min << ' ' << img_max << '\n';
@@ -115,8 +115,8 @@ int main() {
     }
 
     while (!WindowShouldClose()) {
-        Draw();
+        //Draw();
         //std::cerr << real_min << ' ' << real_max << ' ' << img_min << ' ' << img_max << ' ' << tint << '\n';
-        //Tick();
+        Tick();
     }
 }
