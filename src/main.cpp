@@ -44,6 +44,9 @@ void Draw() {
 void Tick() {
     bool up = IsKeyDown(KEY_UP), 
          down = IsKeyDown(KEY_DOWN),
+         left = IsKeyDown(KEY_LEFT),
+         right = IsKeyDown(KEY_RIGHT)
+    ;
 
     if (IsKeyDown(KEY_RIGHT)) {
         tint += TINT_STEP;
@@ -54,7 +57,7 @@ void Tick() {
         Draw();
     }
 
-    else if (IsKeyDown(KEY_LEFT)) {
+    if (IsKeyDown(KEY_LEFT)) {
         tint -= TINT_STEP;
         if (tint < 0.0f) {
             tint = 1.0f;
@@ -63,8 +66,7 @@ void Tick() {
         Draw();
     }
 
-
-    else if () {
+    if () {
 
         auto [posX, posY] = GetMousePosition();
 
@@ -76,10 +78,14 @@ void Tick() {
         Draw();
     }
 
-    else if () {
+    if () {
 
         
 
+        Draw();
+    }
+
+    if (up || down || left || right) {
         Draw();
     }
 }
