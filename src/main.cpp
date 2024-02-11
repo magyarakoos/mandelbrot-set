@@ -49,6 +49,7 @@ void Tick() {
     ;
 
     if (right) {
+        std::cell 
         tint += TINT_STEP;
         if (tint > 1.0f) {
             tint = 0.0f;
