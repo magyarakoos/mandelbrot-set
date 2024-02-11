@@ -52,19 +52,19 @@ void Tick() {
     if (IsKeyPressed(KEY_RIGHT)) {
         update = 1;
         std::cerr << "RIGHT ";
-        /*tint += TINT_STEP;
+        tint += TINT_STEP;
         if (tint > 1.0f) {
             tint = 0.0f;
-        }*/
+        }
     }
 
     else if (IsKeyPressed(KEY_LEFT)) {
         update = 1;
         std::cerr << "LEFT ";
-        /*tint -= TINT_STEP;
+        tint -= TINT_STEP;
         if (tint < 0.0f) {
             tint = 1.0f;
-        }*/
+        }
     }
 
     else if (IsKeyPressed(KEY_UP)) {
@@ -75,11 +75,11 @@ void Tick() {
               deltaY = posY / HEIGHT;
 
         std::cerr << "UP ";
-        /*real_min += ZOOM_STEP * deltaX;
+        real_min += ZOOM_STEP * deltaX;
         img_min += ZOOM_STEP * deltaY; 
 
         real_max -= ZOOM_STEP * (WIDTH - deltaX);
-        img_max -= ZOOM_STEP * (HEIGHT - deltaY);*/
+        img_max -= ZOOM_STEP * (HEIGHT - deltaY);
     }
 
     else if (IsKeyPressed(KEY_DOWN)) {
@@ -90,11 +90,11 @@ void Tick() {
               deltaY = posY / HEIGHT;
 
         std::cerr << "DOWN ";
-        /*real_min -= ZOOM_STEP * deltaX;
+        real_min -= ZOOM_STEP * deltaX;
         img_min -= ZOOM_STEP * deltaY; 
 
         real_max += ZOOM_STEP * (WIDTH - deltaX);
-        img_max += ZOOM_STEP * (HEIGHT - deltaY);*/
+        img_max += ZOOM_STEP * (HEIGHT - deltaY);
     }
 
     if (update) {
