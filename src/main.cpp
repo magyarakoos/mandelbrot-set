@@ -19,7 +19,7 @@ void Draw() {
 
             int it = Mand(c);
 
-            char 
+            unsigned char 
         }
     }
 }
