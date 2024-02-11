@@ -70,12 +70,14 @@ void Tick() {
               deltaY = posY / HEIGHT;
 
         if (up) {
-            
+            REAL_MIN += S 
+        
         }
 
         if (down) {
 
         }
+
     }
 
     if (up || down || left || right) {
