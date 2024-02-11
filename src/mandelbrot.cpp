@@ -15,5 +15,5 @@ int Mand(const Complex& c) {
         it++;
     }
 
-    
+    return it;
 }
