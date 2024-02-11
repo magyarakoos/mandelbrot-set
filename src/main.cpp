@@ -17,14 +17,14 @@ long double
 float tint = TINT;
 
 void Update() {
-    if (IsMouseButtonPressed(MOUSE_BUTTON_FORWARD)) {
+    if (IsKeyPressed(KEY_UP)) {
         tint += 0.01;
         if (tint > 1.0f) {
             tint = 1.0f;
         }
     }
 
-    else if (IsMouseButtonPressed(MOUSE_BUTTON_BACK)) {
+    else if (IsMouseButtonPressed(KEY_DOWN)) {
         tint -= 0.01;
         if (tint < 0.0f) {
             tint = 0.0f;
