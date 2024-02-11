@@ -23,7 +23,7 @@ void Draw() {
 
             std::cerr << it << ' ' << color << '\n';
 
-            DrawPixel(x + 150, y + 2, {
+            DrawPixel(x, y, {
                 (unsigned char)color, 
                 (unsigned char)color, 
                 (unsigned char)color, 
