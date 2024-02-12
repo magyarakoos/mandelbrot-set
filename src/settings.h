@@ -9,7 +9,7 @@ inline constexpr int
 ;
 
 inline const BigFloat
-    REAL_MIN = -2,
+    REAL_MIN = -,
     REAL_MAX = 2,
     IMG_MIN = -2,
     IMG_MAX = 2,
