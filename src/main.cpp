@@ -71,8 +71,6 @@ void Update() {
         Draw();
     }
 
-    return;
-
     if (up != down) {
         double 
             deltaX = GetMouseX() / WIDTH,
@@ -113,7 +111,7 @@ int main() {
 
     while (!WindowShouldClose()) {
         BeginDrawing();
-        //Update();
+        Update();
         EndDrawing();
     }
 }
