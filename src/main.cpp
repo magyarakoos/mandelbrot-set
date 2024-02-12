@@ -7,6 +7,8 @@
 #include "mandelbrot.h"
 #include "settings.h"
 
+// create a lower-case copy of the constants
+// that we are going to modify later
 double
     real_min = REAL_MIN,
     real_max = REAL_MAX,
@@ -16,6 +18,7 @@ double
 
 float tint = TINT;
 
+// c
 std::array<std::array<int, (size_t)WIDTH>, (size_t)HEIGHT> cache;
 
 void Draw(bool recalc = false) {
