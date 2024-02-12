@@ -1,8 +1,11 @@
 #pragma once
 
+#include <boost/multiprecision/cpp_dec_float.hpp>
+using BigFloat = boost::multiprecision::cpp_dec_float_50;
+
 struct Complex {
-    double real;
-    double i;
+    BigFloat real;
+    BigFloat i;
 
     constexpr Complex operator+(const Complex& c) const {
         return {
