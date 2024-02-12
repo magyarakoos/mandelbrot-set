@@ -100,10 +100,10 @@ void Update() {
 
             zoom_level += 0.01;
 
-            real_min -= ZOOM_STEP * deltaX;
-            real_max += ZOOM_STEP * (1 - deltaX);
-            img_min -= ZOOM_STEP * deltaY;
-            img_max += ZOOM_STEP * (1 - deltaY);
+            real_min -= ZOOM_STEP * deltaX * zoom_level;
+            real_max += ZOOM_STEP * (1 - deltaX) * zoom_level;
+            img_min -= ZOOM_STEP * deltaY * zoom_level;
+            img_max += ZOOM_STEP * (1 - deltaY) * zoom_level;
         }
 
         Draw(1);
