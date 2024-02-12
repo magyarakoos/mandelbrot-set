@@ -3,6 +3,7 @@
 #include <raylib.h>
 #include <assert.h>
 #include <array>
+#include <iostream>
 
 #include "mandelbrot.h"
 #include "settings.h"
@@ -60,6 +61,8 @@ void Update() {
         if (tint > 1.0f) {
             tint = 0.0f;
         }
+
+        std::cerr << tint << '\n';
 
         Draw();
     }
