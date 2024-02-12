@@ -17,7 +17,7 @@ double
     real_min = REAL_MIN,
     real_max = REAL_MAX,
     img_min = IMG_MIN,
-    img_max = IMG_MAX,
+    img_max = IMG_MAX
 ;
 
 float 
@@ -26,7 +26,7 @@ float
 ;
 
 // yes, I am terrified of the C raw array
-std::array<int, WIDTH * HEIGHT> cache;
+std::array<int, (size_t)WIDTH * (size_t)HEIGHT> cache;
 
 void Draw(bool recalc = false) {
     for (int x = 0; x < WIDTH; x++) {
@@ -38,8 +38,8 @@ void Draw(bool recalc = false) {
                 // normalize the coordinates from 0 to 1
                 // scale it to the range min..max
                 Complex c {
-                    real_min + (x / width) * (real_max - real_min),
-                    img_min  + (y / height) * (img_max - img_min)
+                    real_min + (x / WIDTH) * (real_max - real_min),
+                    img_min  + (y / HEIGHT) * (img_max - img_min)
                 };
 
                 // save it for later
