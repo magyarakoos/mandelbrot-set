@@ -18,8 +18,6 @@ double
     real_max = REAL_MAX,
     img_min = IMG_MIN,
     img_max = IMG_MAX,
-    width = WIDTH,
-    height = HEIGHT
 ;
 
 float 
@@ -66,7 +64,7 @@ void Draw(bool recalc = false) {
 void Update() {
     bool right = IsKeyDown(KEY_RIGHT),
          left = IsKeyDown(KEY_LEFT),
-         up = IsKeyDown(KEY_UP) || 1,
+         up = IsKeyDown(KEY_UP),
          down = IsKeyDown(KEY_DOWN);
 
     if (right) {
