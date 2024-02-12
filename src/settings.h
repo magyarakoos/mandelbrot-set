@@ -7,7 +7,7 @@ inline constexpr int
     ITER = 200
 ;
 
-inline constexpr mp::
+inline const mp::cpp_dec_float_50
     WIDTH = 800,
     HEIGHT = 800,
     REAL_MIN = -2,
