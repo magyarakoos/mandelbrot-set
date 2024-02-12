@@ -25,6 +25,8 @@ void Draw(bool recalc = false) {
             int it;
 
             if (recalc) {
+                // normalize the coordinates from 0 to 1
+                // scale it to the range min..max
                 Complex c {
                     real_min + (x / WIDTH) * (real_max - real_min),
                     img_min  + (y / HEIGHT) * (img_max - img_min)
