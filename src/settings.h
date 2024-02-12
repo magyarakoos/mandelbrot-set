@@ -3,7 +3,7 @@
 
 inline constexpr int
     FPS = 1,
-    ITER = 25,
+    ITER = 50,
     WIDTH = 400,
     HEIGHT = 400
 ;
