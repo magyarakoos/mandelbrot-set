@@ -33,6 +33,7 @@ void Draw(bool recalc = false) {
                 };
 
                 it = Mand(c);
+                cache[y][x] = (it);
             } else {
                 it = cache[y][x];
             }
@@ -93,14 +94,6 @@ void Update() {
             img_max += ZOOM_STEP * (1 - deltaY);
         }
 
-        Draw(1);
-    }
-
-    if (right || left) {
-        Draw();
-    }
-
-    else if (up || down) {
         Draw(1);
     }
 
