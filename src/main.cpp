@@ -7,9 +7,13 @@
 #include "mandelbrot.h"
 #include "settings.h"
 
+#include <boost/multiprecision/cpp_dec_float.hpp>
+using BigFloat = boost::multiprecision::cpp_dec_float_50;
+
+
 // create a lower-case copy of the constants
 // that we are going to modify later
-double
+BigFloat
     real_min = REAL_MIN,
     real_max = REAL_MAX,
     img_min = IMG_MIN,

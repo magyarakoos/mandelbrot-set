@@ -7,7 +7,7 @@ struct Complex {
     BigFloat real;
     BigFloat i;
 
-    constexpr Complex operator+(const Complex& c) const {
+    Complex operator+(const Complex& c) const {
         return {
             real + c.real,
             i + c.i
@@ -18,7 +18,7 @@ struct Complex {
         return *this = *this + c;
     }
 
-    constexpr Complex operator*(const Complex& c) const {
+    Complex operator*(const Complex& c) const {
         // (a + bi) * (c + di) = (ac − bd) + (ad + bc)i
         return {
             real * c.real - i * c.i,
