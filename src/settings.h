@@ -7,8 +7,8 @@ inline constexpr int
 ;
 
 inline constexpr double
-    WIDTH = 400,
-    HEIGHT = 400,
+    WIDTH = 800,
+    HEIGHT = 800,
     REAL_MIN = -2,
     REAL_MAX = 2,
     IMG_MIN = -2,
