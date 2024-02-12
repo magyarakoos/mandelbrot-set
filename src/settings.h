@@ -16,7 +16,9 @@ inline constexpr double
 
 inline constexpr float
     // red: 0.0f
-    TINT = 0.5f,
+    // pink: 0.76f
+    // light blue: 0.5f
+    TINT = 0.64f,
     TINT_STEP = 0.02f
 ;
 
