@@ -95,7 +95,6 @@ void Update() {
 
         Draw(1);
     }
-
 }
 
 int main() {
@@ -113,9 +112,7 @@ int main() {
 
     while (!WindowShouldClose()) {
         BeginDrawing();
-        if (frames_elapsed % (FPS / 10) == 0) {
-            Update();
-        }
+        Update();
         EndDrawing();
 
         frames_elapsed++;
