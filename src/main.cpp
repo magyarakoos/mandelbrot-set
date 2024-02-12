@@ -111,6 +111,7 @@ int main() {
 
     while (!WindowShouldClose()) {
         BeginDrawing();
+        if ()
         Update();
         EndDrawing();
     }
