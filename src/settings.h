@@ -3,7 +3,7 @@ using BigFloat = boost::multiprecision::cpp_dec_float_50;
 
 inline constexpr int
     FPS = 60,
-    ITER = 200,
+    ITER = 50,
     WIDTH = 800,
     HEIGHT = 800
 ;
