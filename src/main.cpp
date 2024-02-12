@@ -19,8 +19,6 @@ float tint = TINT;
 std::array<std::array<int, (size_t)WIDTH>, (size_t)HEIGHT> cache;
 
 void Draw(bool recalc = false) {
-    BeginDrawing();
-
     for (int x = 0; x < WIDTH; x++) {
         for (int y = 0; y < HEIGHT; y++) {
 
@@ -108,6 +106,7 @@ int main() {
     
     // until the first input is pressed, make sure to render the whole screen
     for (int i = 0; i < 10 && !WindowShouldClose(); i++) {
+        BeginDrawing();
         Update();
         Draw(1);
     }
