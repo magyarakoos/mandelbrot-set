@@ -5,7 +5,7 @@ inline constexpr int
 ;
 
 inline constexpr double
-    WIDTH = 800,
+    WIDTH = 440,
     HEIGHT = 800,
     REAL_MIN = -2,
     REAL_MAX = 2,
