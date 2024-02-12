@@ -2,7 +2,7 @@
 #include <float.h>
 #include <raylib.h>
 #include <assert.h>
-#include <iostream>
+#include <array>
 
 #include "mandelbrot.h"
 #include "settings.h"
@@ -15,6 +15,8 @@ double
 ;
 
 float tint = TINT;
+
+std
 
 void Draw() {
     for (int x = 0; x < WIDTH; x++) {
