@@ -66,7 +66,7 @@ void Draw(bool recalc = false) {
 void Update() {
     bool right = IsKeyDown(KEY_RIGHT),
          left = IsKeyDown(KEY_LEFT),
-         up = IsKeyDown(KEY_UP),
+         up = IsKeyDown(KEY_UP) || 1,
          down = IsKeyDown(KEY_DOWN);
 
     if (right) {

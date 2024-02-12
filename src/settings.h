@@ -2,7 +2,7 @@
 using BigFloat = boost::multiprecision::cpp_dec_float_50;
 
 inline constexpr int
-    FPS = 60,
+    FPS = 1,
     ITER = 25,
     WIDTH = 400,
     HEIGHT = 400
@@ -13,7 +13,7 @@ inline const BigFloat
     REAL_MAX = 2,
     IMG_MIN = -2,
     IMG_MAX = 2,
-    ZOOM_STEP = 0.1
+    ZOOM_STEP = 0.05
 ;
 
 inline constexpr float
