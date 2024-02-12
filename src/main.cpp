@@ -18,8 +18,8 @@ double
 
 float tint = TINT;
 
-// c
-std::array<std::array<int, (size_t)WIDTH>, (size_t)HEIGHT> cache;
+// yes, I am terrified of the C raw array
+std::array<(size_t)WIDTH * (size_t)HEIGHT> cache;
 
 void Draw(bool recalc = false) {
     for (int x = 0; x < WIDTH; x++) {
