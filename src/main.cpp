@@ -19,7 +19,7 @@ double
 float tint = TINT;
 
 // yes, I am terrified of the C raw array
-std::array<(size_t)WIDTH * (size_t)HEIGHT> cache;
+std::array<int, (size_t)WIDTH * (size_t)HEIGHT> cache;
 
 void Draw(bool recalc = false) {
     for (int x = 0; x < WIDTH; x++) {
@@ -36,10 +36,10 @@ void Draw(bool recalc = false) {
                 };
 
                 // save it for later
-                cache[y][x] = (it = Mand(c));
+                cache[y * WIDTH + x] = (it = Mand(c));
             } else {
                 // being fast is about doing less
-                it = cache[y][x];
+                it = cache[y * WIDTH + x];
             }
 
             // map the iteration number to a color
