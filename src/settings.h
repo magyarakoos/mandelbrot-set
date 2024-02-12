@@ -1,13 +1,12 @@
 #include <boost/multiprecision/cpp_dec_float.hpp>
-
-namespace mp = boost::multiprecision;
+using BigFloat = boost::multiprecision::cpp_dec_float_50;
 
 inline constexpr int
     FPS = 60,
     ITER = 200
 ;
 
-inline const mp::cpp_dec_float_50
+inline const BigFloat
     WIDTH = 800,
     HEIGHT = 800,
     REAL_MIN = -2,
