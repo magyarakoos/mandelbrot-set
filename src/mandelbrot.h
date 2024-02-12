@@ -7,18 +7,18 @@ struct Complex {
     double real;
     double i;
 
-    Complex operator+(const Complex& c) const {
+    constexpr Complex operator+(const Complex& c) const {
         return {
             real + c.real,
             i + c.i
         };
     }
 
-    Complex& operator+=(const Complex& c) {
+    constexpr Complex& operator+=(const Complex& c) {
         return *this = *this + c;
     }
 
-    Complex operator*(const Complex& c) const {
+    constexpr Complex operator*(const Complex& c) const {
         // (a + bi) * (c + di) = (ac − bd) + (ad + bc)i
         return {
             real * c.real - i * c.i,
@@ -26,7 +26,7 @@ struct Complex {
         };
     }
 
-    Complex& operator*=(const Complex& c) {
+    constexpr Complex& operator*=(const Complex& c) {
         return *this = *this * c;
     }
 
