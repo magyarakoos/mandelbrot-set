@@ -3,7 +3,6 @@
 #include <raylib.h>
 #include <assert.h>
 #include <array>
-#include <iostream>
 
 #include "mandelbrot.h"
 #include "settings.h"
@@ -16,8 +15,6 @@ double
 ;
 
 float tint = TINT;
-
-unsigned frames_elapsed;
 
 std::array<std::array<int, (size_t)WIDTH>, (size_t)HEIGHT> cache;
 
@@ -62,8 +59,6 @@ void Update() {
             tint = 0.0f;
         }
 
-        std::cerr << tint << '\n';
-
         Draw();
     }
 
@@ -72,8 +67,6 @@ void Update() {
         if (tint < 0.0f) {
             tint = 1.0f;
         }
-
-        std::cerr << tint << '\n';
 
         Draw();
     }
@@ -119,7 +112,5 @@ int main() {
         BeginDrawing();
         Update();
         EndDrawing();
-
-        frames_elapsed++;
     }
 }
