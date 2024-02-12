@@ -18,6 +18,8 @@ double
 
 float tint = TINT;
 
+int zoom_level;
+
 // yes, I am terrified of the C raw array
 std::array<int, (size_t)WIDTH * (size_t)HEIGHT> cache;
 
