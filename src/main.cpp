@@ -70,6 +70,8 @@ void Update() {
             tint = 1.0f;
         }
 
+        std::cerr << tint << '\n';
+
         Draw();
     }
 
