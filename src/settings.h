@@ -1,5 +1,5 @@
-#include <boost/multiprecision/cpp_dec_float.hpp>
-using BigFloat = boost::multiprecision::cpp_dec_float_50;
+//#include <boost/multiprecision/cpp_dec_float.hpp>
+// using BigFloat = boost::multiprecision::cpp_dec_float_50;
 
 inline constexpr int
     FPS = 1,
@@ -8,7 +8,7 @@ inline constexpr int
     HEIGHT = 400
 ;
 
-inline const BigFloat
+inline const double
     REAL_MIN = -2,
     REAL_MAX = 2,
     IMG_MIN = -2,
