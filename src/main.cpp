@@ -48,8 +48,8 @@ void Draw(bool recalc = false) {
 void Update() {
     bool right = IsKeyDown(KEY_RIGHT),
          left = IsKeyDown(KEY_LEFT),
-         up = IsKeyDown(KEY_UP),
-         down = IsKeyDown(KEY_DOWN);
+         up = IsKeyPressed(KEY_UP),
+         down = IsKeyPressed(KEY_DOWN);
 
     if (right) {
         tint += TINT_STEP;
