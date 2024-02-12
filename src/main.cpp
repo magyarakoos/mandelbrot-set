@@ -32,8 +32,7 @@ void Draw(bool recalc = false) {
                     img_min  + (y / HEIGHT) * (img_max - img_min)
                 };
 
-                it = Mand(c);
-                cache[y][x] = (it);
+                cache[y][x] = (it = Mand(c));
             } else {
                 it = cache[y][x];
             }
@@ -73,6 +72,8 @@ void Update() {
 
         Draw();
     }
+
+    return;
 
     if (up != down) {
         double 
