@@ -60,6 +60,8 @@ void Update() {
         if (tint > 1.0f) {
             tint = 0.0f;
         }
+
+        Draw();
     }
 
     if (left) {
@@ -67,6 +69,8 @@ void Update() {
         if (tint < 0.0f) {
             tint = 1.0f;
         }
+
+        Draw();
     }
 
     if (up != down) {
@@ -88,6 +92,8 @@ void Update() {
             img_min -= ZOOM_STEP * deltaY;
             img_max += ZOOM_STEP * (1 - deltaY);
         }
+
+        Draw(1);
     }
 
     if (right || left) {
