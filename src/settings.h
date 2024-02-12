@@ -6,7 +6,7 @@ inline constexpr int
     ITER = 50
 ;
 
-inline const double
+inline constexpr double
     WIDTH = 400,
     HEIGHT = 400,
     REAL_MIN = -2,
