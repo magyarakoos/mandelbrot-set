@@ -45,6 +45,8 @@ void Draw(bool recalc = false) {
             DrawPixel(x, y, color);
         }
     }
+
+    EndDrawing();
 }
 
 void Update() {
@@ -103,17 +105,17 @@ int main() {
     SetTargetFPS(FPS);
     InitWindow(WIDTH, HEIGHT, TITLE);
     
+    // until the 
     while (
         !WindowShouldClose() && 
         !(IsKeyPressed(KEY_RIGHT) || IsKeyPressed(KEY_LEFT) ||
           IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_DOWN)
         )) {
-            
+        Update();
+        Draw(1);
     }
     
     while (!WindowShouldClose()) {
-        
         Update();
-        
     }
 }
