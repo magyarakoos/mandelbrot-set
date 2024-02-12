@@ -26,7 +26,7 @@ float
 ;
 
 // yes, I am terrified of the C raw array
-std::array<int, (size_t)WIDTH * (size_t)HEIGHT> cache;
+std::array<int, WIDTH * HEIGHT> cache;
 
 void Draw(bool recalc = false) {
     for (int x = 0; x < WIDTH; x++) {
