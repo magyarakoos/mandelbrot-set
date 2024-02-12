@@ -105,7 +105,7 @@ int main() {
     SetTargetFPS(FPS);
     InitWindow(WIDTH, HEIGHT, TITLE);
     
-    // until the 
+    // until the first input is pressed, make sure to render the whole screen
     while (
         !WindowShouldClose() && 
         !(IsKeyPressed(KEY_RIGHT) || IsKeyPressed(KEY_LEFT) ||
