@@ -32,8 +32,10 @@ void Draw(bool recalc = false) {
                     img_min  + (y / HEIGHT) * (img_max - img_min)
                 };
 
+                // save it for later
                 cache[y][x] = (it = Mand(c));
             } else {
+                // being fast is about doing less
                 it = cache[y][x];
             }
 
