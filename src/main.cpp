@@ -52,8 +52,8 @@ void Draw(bool recalc = false) {
 void Update() {
     bool right = IsKeyDown(KEY_RIGHT),
          left = IsKeyDown(KEY_LEFT),
-         up = IsKeyPressed(KEY_UP),
-         down = IsKeyPressed(KEY_DOWN);
+         up = IsKeyDown(KEY_UP),
+         down = IsKeyDown(KEY_DOWN);
 
     if (right) {
         tint += TINT_STEP;
@@ -113,8 +113,9 @@ int main() {
 
     while (!WindowShouldClose()) {
         BeginDrawing();
-        if (frames_elapsed % ())
-        Update();
+        if (frames_elapsed % (FPS / 10) == 0) {
+            Update();
+        }
         EndDrawing();
 
         frames_elapsed++;
