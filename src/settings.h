@@ -18,6 +18,7 @@ inline constexpr float
     // red: 0.0f
     // pink: 0.76f
     // light blue: 0.5f
+    // green: 0.32f
     TINT = 0.64f,
     TINT_STEP = 0.02f
 ;
