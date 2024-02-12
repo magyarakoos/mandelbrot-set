@@ -89,9 +89,9 @@ void Update() {
 
             zoom_level++;
 
-            real_min += ZOOM_STEP * deltaX;
+            real_min += (ZOOM_STEP * deltaX) * (1 - zoom_level / 100);
             real_max -= ZOOM_STEP * (1 - deltaX);
-            img_min += ZOOM_STEP * deltaY;
+            img_min += ZOOM_STEP * deltaY *  * (1 - zoom_level / 100)
             img_max -= ZOOM_STEP * (1 - deltaY);
         }
 
