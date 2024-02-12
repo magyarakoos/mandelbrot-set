@@ -89,7 +89,7 @@ void Update() {
             img_max += ZOOM_STEP * (1 - deltaY);
         }
     }
-/*
+
     if (right || left) {
         Draw();
     }
@@ -106,15 +106,11 @@ int main() {
     SetTargetFPS(FPS);
     InitWindow(WIDTH, HEIGHT, TITLE);
     
-    /*// until the first input is pressed, make sure to render the whole screen
-    while (
-        !WindowShouldClose() && 
-        !(IsKeyPressed(KEY_RIGHT) || IsKeyPressed(KEY_LEFT) ||
-          IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_DOWN)
-        )) {
+    // until the first input is pressed, make sure to render the whole screen
+    for (int i = 0; i < 10; i++) (
         Update();
         Draw(1);
-    }*/
+    }
     
     while (!WindowShouldClose()) {
         Update();
