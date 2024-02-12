@@ -16,6 +16,8 @@ double
 
 float tint = TINT;
 
+unsigned frames_elapsed;
+
 std::array<std::array<int, (size_t)WIDTH>, (size_t)HEIGHT> cache;
 
 void Draw(bool recalc = false) {
@@ -111,8 +113,10 @@ int main() {
 
     while (!WindowShouldClose()) {
         BeginDrawing();
-        if ()
+        if (frames_elapsed % ())
         Update();
         EndDrawing();
+
+        frames_elapsed++;
     }
 }
