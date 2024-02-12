@@ -25,14 +25,15 @@ void Draw(bool recalc = false) {
             int it;
 
             if (recalc) {
+                Complex c {
+                    real_min + (x / WIDTH) * (real_max - real_min),
+                    img_min  + (y / HEIGHT) * (img_max - img_min)
+                };
 
+                int it = Mand(c);
+            } else {
+                it = cache[y][x];
             }
-            Complex c {
-                real_min + (x / WIDTH) * (real_max - real_min),
-                img_min  + (y / HEIGHT) * (img_max - img_min)
-            };
-
-            int it = Mand(c);
 
             // map the iteration number to a color
             float hue = fmod(fmod(static_cast<float>(it) / ITER, 1.0f) + tint, 1.0f);
