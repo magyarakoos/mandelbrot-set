@@ -1,11 +1,13 @@
-#include <boost/multiprecision/
+#include <boost/multiprecision/cpp_dec_float.hpp>
+
+namespace mp = boost::multiprecision;
 
 inline constexpr int
     FPS = 60,
     ITER = 200
 ;
 
-inline constexpr double
+inline constexpr mp::
     WIDTH = 800,
     HEIGHT = 800,
     REAL_MIN = -2,
