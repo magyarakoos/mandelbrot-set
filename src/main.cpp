@@ -86,8 +86,12 @@ void Update() {
         }
     }
 
-    if (right || left || up || down) {
+    if (right || left) {
         Draw();
+    }
+
+    else if (up || down) {
+        Draw(1);
     }
 }
 
