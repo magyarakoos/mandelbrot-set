@@ -88,7 +88,7 @@ void Update() {
 
         if (up) {
 
-            zoom_level -= 0.005;
+            zoom_level -= 0.0075;
 
             real_min += (ZOOM_STEP * deltaX) * zoom_level;
             real_max -= ZOOM_STEP * (1 - deltaX) * zoom_level;
@@ -98,7 +98,7 @@ void Update() {
 
         if (down) {
 
-            zoom_level += 0.005;
+            zoom_level += 0.0075;
 
             real_min -= ZOOM_STEP * deltaX * zoom_level;
             real_max += ZOOM_STEP * (1 - deltaX) * zoom_level;
