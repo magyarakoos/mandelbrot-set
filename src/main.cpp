@@ -101,9 +101,11 @@ int main() {
     SetTargetFPS(FPS);
     InitWindow(WIDTH, HEIGHT, TITLE);
     
-    while (!WindowShouldClose()) {
-
-    }
+    while (
+        !WindowShouldClose() && 
+        !(IsKeyPressed(KEY_RIGHT) || IsKeyPressed(KEY_LEFT) ||
+        
+        ));
     
     while (!WindowShouldClose()) {
         BeginDrawing();
