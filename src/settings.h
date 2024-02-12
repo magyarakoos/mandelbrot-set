@@ -4,8 +4,8 @@ using BigFloat = boost::multiprecision::cpp_dec_float_50;
 inline constexpr int
     FPS = 60,
     ITER = 50,
-    WIDTH = 200,
-    HEIGHT = 200
+    WIDTH = 400,
+    HEIGHT = 400
 ;
 
 inline const BigFloat
