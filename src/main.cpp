@@ -19,6 +19,8 @@ float tint = TINT;
 std::array<std::array<int, (size_t)WIDTH>, (size_t)HEIGHT> cache;
 
 void Draw(bool recalc = false) {
+    BeginDrawing();
+
     for (int x = 0; x < WIDTH; x++) {
         for (int y = 0; y < HEIGHT; y++) {
 
@@ -104,12 +106,14 @@ int main() {
     while (
         !WindowShouldClose() && 
         !(IsKeyPressed(KEY_RIGHT) || IsKeyPressed(KEY_LEFT) ||
-        
-        ));
+          IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_DOWN)
+        )) {
+            
+    }
     
     while (!WindowShouldClose()) {
-        BeginDrawing();
+        
         Update();
-        EndDrawing();
+        
     }
 }
