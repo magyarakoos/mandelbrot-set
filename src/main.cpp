@@ -18,10 +18,15 @@ float tint = TINT;
 
 std::array<std::array<int, (size_t)WIDTH>, (size_t)HEIGHT> cache;
 
-void Draw() {
+void Draw(bool recalc = false) {
     for (int x = 0; x < WIDTH; x++) {
         for (int y = 0; y < HEIGHT; y++) {
 
+            int it;
+
+            if (recalc) {
+
+            }
             Complex c {
                 real_min + (x / WIDTH) * (real_max - real_min),
                 img_min  + (y / HEIGHT) * (img_max - img_min)
