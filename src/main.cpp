@@ -104,14 +104,16 @@ int main() {
     SetTargetFPS(FPS);
     InitWindow(WIDTH, HEIGHT, TITLE);
     
-    // until the first input is pressed, make sure to render the whole screen
+    // before the first input is pressed, make sure to render the whole screen
     for (int i = 0; i < 10 && !WindowShouldClose(); i++) {
         BeginDrawing();
-        Update();
         Draw(1);
+        EndDrawing();
     }
-    
+
     while (!WindowShouldClose()) {
+        BeginDrawing();
         //Update();
+        EndDrawing();
     }
 }
