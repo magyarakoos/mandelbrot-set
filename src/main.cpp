@@ -107,12 +107,12 @@ int main() {
     InitWindow(WIDTH, HEIGHT, TITLE);
     
     // until the first input is pressed, make sure to render the whole screen
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10 && !WindowShouldClose(); i++) {
         Update();
         Draw(1);
     }
     
     while (!WindowShouldClose()) {
-        Update();
+        //Update();
     }
 }
