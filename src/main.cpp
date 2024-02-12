@@ -16,7 +16,7 @@ double
 
 float tint = TINT;
 
-std
+std::array<std::array<int, (size_t)WIDTH>, (size_t)HEIGHT> cache;
 
 void Draw() {
     for (int x = 0; x < WIDTH; x++) {
