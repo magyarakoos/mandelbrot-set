@@ -87,6 +87,8 @@ void Update() {
 
         if (up) {
 
+            zoom_level++;
+
             real_min += ZOOM_STEP * deltaX;
             real_max -= ZOOM_STEP * (1 - deltaX);
             img_min += ZOOM_STEP * deltaY;
@@ -94,6 +96,9 @@ void Update() {
         }
 
         if (down) {
+
+            zoom_level--;
+
             real_min -= ZOOM_STEP * deltaX;
             real_max += ZOOM_STEP * (1 - deltaX);
             img_min -= ZOOM_STEP * deltaY;
