@@ -9,11 +9,11 @@ inline constexpr int
 ;
 
 inline const BigFloat
-    REAL_MIN = -,
+    REAL_MIN = -2,
     REAL_MAX = 2,
     IMG_MIN = -2,
     IMG_MAX = 2,
-    ZOOM_STEP = 0.05
+    ZOOM_STEP = 0.2
 ;
 
 inline constexpr float
