@@ -100,12 +100,6 @@ int main() {
 
     SetTargetFPS(FPS);
     InitWindow(WIDTH, HEIGHT, TITLE);
-
-    for (int i = 0; i < 2; i++) {
-        BeginDrawing();
-        Draw();
-        EndDrawing();
-    }
     
     while (!WindowShouldClose()) {
         BeginDrawing();
