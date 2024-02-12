@@ -1,5 +1,5 @@
 #include <boost/multiprecision/cpp_dec_float.hpp>
-using BigFloat = boost::multiprecision::cpp_dec_float_50;
+using BigFloat = boost::multiprecision::cpp_dec;
 
 inline constexpr int
     FPS = 60,
