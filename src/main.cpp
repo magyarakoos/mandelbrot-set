@@ -87,6 +87,16 @@ bool GetInput() {
 
         return 0;
     }
+
+    if (IsKeyPressed(KEY_LEFT)) {
+
+        tint -= TINT_STEP;
+        if (tint < 0) {
+            tint = 1;
+        }
+
+        return 0;
+    }
 }
 
 int main() {
