@@ -8,9 +8,9 @@ using complex = std::complex<double>;
 
 constexpr int
     FPS = 60,
-    ITER = 200,
+    MAX_ITER = 200,
     WIDTH = 800,
-    HEIGHT = 800
+    HEIGHT = 800,
 ;
 
 double
@@ -46,7 +46,7 @@ int Mand(const complex& c) {
     int it = 0;
     complex z = 0;
 
-    
+    while (it < MAX_ITER && abs(zy))
 }
 
 void Calculate() {
