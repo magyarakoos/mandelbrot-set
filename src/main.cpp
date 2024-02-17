@@ -57,7 +57,12 @@ int Mand(const complex& c) {
 void Calculate() {
     for (int y = 0; y < HEIGHT; y++) {
         for (int x = 0; x < WIDTH; x++) {
-            
+
+            complex c {
+                
+            };
+
+            cache[y][x] = Mand()
         }
     }
 }
