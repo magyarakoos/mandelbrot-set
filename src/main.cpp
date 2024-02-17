@@ -14,14 +14,13 @@ constexpr int
 double
     real_min = -2,
     real_max = 2,
-    IMG_MIN = -2,
-    IMG_MAX = 2,
-    ZOOM_STEP = 0.05
+    img_min = -2,
+    img_max = 2
 ;
 
 float
-    TINT = 0.64f,
-    TINT_STEP = 0.02f
+    TINT_STEP = 0.02f,
+    tint = 0.64f
 ;
 
 std::array<int, (size_t)WIDTH * (size_t)HEIGHT> cache;
