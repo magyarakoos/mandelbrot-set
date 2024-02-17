@@ -59,7 +59,7 @@ void Calculate() {
         for (int x = 0; x < WIDTH; x++) {
 
             complex c {
-                
+                real_min + (real_max - real_min) * x / (WIDTH - 1);
             };
 
             cache[y][x] = Mand()
