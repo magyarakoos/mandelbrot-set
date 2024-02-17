@@ -3,6 +3,7 @@
 #include <assert.h>
 #include <complex>
 #include <array>
+#include <string>
 
 using complex = std::complex<double>;
 
@@ -75,7 +76,7 @@ void Tick(bool update) {
         }
     }
 
-    DrawText("")
+    DrawText("tint: " + std::to_string(tint) + " ", )
 }
 
 bool GetInput() {
