@@ -42,8 +42,11 @@ void Draw(bool recalc = false) {
     EndDrawing();
 }
 
-int Mand(const complex& ) {
+int Mand(const complex& c) {
+    int it = 0;
+    complex z = 0;
 
+    
 }
 
 void Calculate() {
