@@ -62,57 +62,12 @@ void Draw(bool recalc = false) {
     EndDrawing();
 }
 
-void Mandelbrot() {
-    
+int Mand() {
+
 }
 
-void Update() {
-    bool right = IsKeyDown(KEY_RIGHT),
-         left = IsKeyDown(KEY_LEFT),
-         up = IsKeyDown(KEY_UP),
-         down = IsKeyDown(KEY_DOWN);
+void Calculate() {
 
-    if (right) {
-        tint += TINT_STEP;
-        if (tint > 1.0f) {
-            tint = 0.0f;
-        }
-
-        Draw();
-    }
-
-    if (left) {
-        tint -= TINT_STEP;
-        if (tint < 0.0f) {
-            tint = 1.0f;
-        }
-
-        Draw();
-    }
-
-    if (up != down) {
-        double 
-            deltaX = GetMouseX() / WIDTH,
-            deltaY = GetMouseY() / HEIGHT;
-
-        if (up) {
-
-            real_min += (ZOOM_STEP * deltaX) * zoom_level;
-            real_max -= ZOOM_STEP * (1 - deltaX) * zoom_level;
-            img_min += ZOOM_STEP * deltaY * zoom_level;
-            img_max -= ZOOM_STEP * (1 - deltaY) * zoom_level;
-        }
-
-        if (down) {
-
-            real_min -= ZOOM_STEP * deltaX * zoom_level;
-            real_max += ZOOM_STEP * (1 - deltaX) * zoom_level;
-            img_min -= ZOOM_STEP * deltaY * zoom_level;
-            img_max += ZOOM_STEP * (1 - deltaY) * zoom_level;
-        }
-
-        Draw(1);
-    }
 }
 
 int main() {
@@ -123,7 +78,7 @@ int main() {
 
     while (!WindowShouldClose()) {
         BeginDrawing();
-        Update();
+        
         EndDrawing();
     }
 }
