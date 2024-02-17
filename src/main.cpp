@@ -7,12 +7,12 @@
 // #include <boost/multiprecision/cpp_dec_float.hpp>
 // using BigFloat = boost::multiprecision::cpp_dec_float_50;
 
-inline constexpr int
+int
     FPS = 60,
     ITER = 200
 ;
 
-inline constexpr double
+double
     WIDTH = 800,
     HEIGHT = 800,
     REAL_MIN = -2,
@@ -22,7 +22,7 @@ inline constexpr double
     ZOOM_STEP = 0.05
 ;
 
-inline constexpr float
+float
     // pink: 0.76f
     // light blue: 0.5f
     // green: 0.32f
@@ -32,25 +32,6 @@ inline constexpr float
 
     TINT = 0.64f,
     TINT_STEP = 0.02f
-;
-
-inline constexpr char
-    TITLE[] = "Mandelbrot Set"
-;
-
-#include "mandelbrot.h"
-#include "settings.h"
-
-// #include <boost/multiprecision/cpp_dec_float.hpp>
-// using BigFloat = boost::multiprecision::cpp_dec_float_50;
-
-// create a lower-case copy of the constants
-// that we are going to modify later
-double
-    real_min = REAL_MIN,
-    real_max = REAL_MAX,
-    img_min = IMG_MIN,
-    img_max = IMG_MAX
 ;
 
 float 
