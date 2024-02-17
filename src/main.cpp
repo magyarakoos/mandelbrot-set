@@ -68,6 +68,14 @@ void Calculate() {
     }
 }
 
+void Tick(bool update) {
+    if (update) {
+        Calculate();
+    }
+
+    
+}
+
 int main() {
     assert(!GetWindowHandle());
 
