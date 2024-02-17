@@ -73,7 +73,19 @@ void Tick(bool update) {
         Calculate();
     }
 
-    
+    for (int x = 0; x < WIDTH; x++) {
+        for (int y = 0; y < HEIGHT; y++) {
+
+            float hue = fmod(
+                fmod(
+                    static_cast<float>(cache[y * WIDTH + x]) / 
+                    MAX_ITER, 1.0f
+                ) + tint, 1.0f);
+            Color color = ColorFromHSV(hue * 360, 1.0f, 1.0f);
+
+            DrawPixel(x, y, color);
+        }
+    }
 }
 
 int main() {
