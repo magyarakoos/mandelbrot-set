@@ -10,7 +10,7 @@ constexpr int
     FPS = 60,
     MAX_ITER = 200,
     WIDTH = 800,
-    HEIGHT = 800,
+    HEIGHT = 800
 ;
 
 double
@@ -82,9 +82,11 @@ int main() {
     SetTargetFPS(FPS);
     InitWindow(WIDTH, HEIGHT, "Mandelbrot Set");
 
+    Tick(1);
+
     while (!WindowShouldClose()) {
         BeginDrawing();
-
+        Tick(0);
         EndDrawing();
     }
 }
