@@ -74,6 +74,8 @@ void Tick(bool update) {
             DrawPixel(x, y, color);
         }
     }
+
+    DrawText("")
 }
 
 bool GetInput() {
