@@ -7,14 +7,14 @@
 // #include <boost/multiprecision/cpp_dec_float.hpp>
 // using BigFloat = boost::multiprecision::cpp_dec_float_50;
 
-int
+constexpr int
     FPS = 60,
-    ITER = 200
+    ITER = 200,
+    WIDTH = 800,
+    HEIGHT = 800
 ;
 
 double
-    WIDTH = 800,
-    HEIGHT = 800,
     REAL_MIN = -2,
     REAL_MAX = 2,
     IMG_MIN = -2,
@@ -34,11 +34,6 @@ float
     TINT_STEP = 0.02f
 ;
 
-float 
-    tint = TINT
-;
-
-// yes, I am terrified of the C raw array
 std::array<int, (size_t)WIDTH * (size_t)HEIGHT> cache;
 
 void Draw(bool recalc = false) {
