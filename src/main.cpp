@@ -122,14 +122,7 @@ int main() {
     assert(!GetWindowHandle());
 
     SetTargetFPS(FPS);
-    InitWindow(WIDTH, HEIGHT, TITLE);
-    
-    // before the first input is pressed, make sure to render the whole screen
-    for (int i = 0; i < 10 && !WindowShouldClose(); i++) {
-        BeginDrawing();
-        Draw(1);
-        EndDrawing();
-    }
+    InitWindow(WIDTH, HEIGHT, "Mandelbrot Set");
 
     while (!WindowShouldClose()) {
         BeginDrawing();
