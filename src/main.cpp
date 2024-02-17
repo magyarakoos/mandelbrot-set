@@ -4,7 +4,7 @@
 #include <complex>
 #include <array>
 
-using names
+using complex = std::complex<double>;
 
 constexpr int
     FPS = 60,
@@ -42,7 +42,7 @@ void Draw(bool recalc = false) {
     EndDrawing();
 }
 
-int Mand(const std::complex) {
+int Mand(const complex& ) {
 
 }
 
