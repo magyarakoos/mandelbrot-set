@@ -46,7 +46,12 @@ int Mand(const complex& c) {
     int it = 0;
     complex z = 0;
 
-    while (it < MAX_ITER && abs(zy))
+    while (it < MAX_ITER && abs(z) < 2) {
+        z = z * z + c;
+        it++;
+    }
+
+    return it;
 }
 
 void Calculate() {
