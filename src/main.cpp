@@ -76,6 +76,11 @@ void Tick(bool update) {
     }
 }
 
+bool GetInput() {
+
+    if (IsKeyPressed(KEY_))
+}
+
 int main() {
     assert(!GetWindowHandle());
 
@@ -89,7 +94,8 @@ int main() {
 
         bool update = GetInput();
 
-        Tick(0);
+        Tick(update);
+
         EndDrawing();
     }
 }
