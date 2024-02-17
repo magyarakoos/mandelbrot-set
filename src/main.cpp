@@ -78,7 +78,15 @@ void Tick(bool update) {
 
 bool GetInput() {
 
-    if (IsKeyPressed(KEY_))
+    if (IsKeyPressed(KEY_RIGHT)) {
+
+        tint += TINT_STEP;
+        if (tint > 1) {
+            tint = 0;
+        }
+
+        return 0;
+    }
 }
 
 int main() {
