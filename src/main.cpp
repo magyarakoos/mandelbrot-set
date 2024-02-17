@@ -82,7 +82,7 @@ void Tick(bool update) {
 
 bool GetInput() {
 
-    if (IsKeyPressed(KEY_RIGHT)) {
+    if (IsKeyDown(KEY_RIGHT)) {
 
         tint += TINT_STEP;
         if (tint > 1) {
@@ -92,7 +92,7 @@ bool GetInput() {
         return 0;
     }
 
-    if (IsKeyPressed(KEY_LEFT)) {
+    if (IsKeyDown(KEY_LEFT)) {
 
         tint -= TINT_STEP;
         if (tint < 0) {
