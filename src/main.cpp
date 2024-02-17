@@ -86,6 +86,9 @@ int main() {
 
     while (!WindowShouldClose()) {
         BeginDrawing();
+
+        bool update = GetInput();
+
         Tick(0);
         EndDrawing();
     }
