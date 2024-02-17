@@ -60,10 +60,10 @@ void Calculate() {
 
             complex c {
                 real_min + (real_max - real_min) * x / (WIDTH - 1),
-                
+                img_min + (img_max - img_min) * y / (HEIGHT - 1)
             };
 
-            cache[y][x] = Mand()
+            cache[y * WIDTH + x] = Mand(c);
         }
     }
 }
