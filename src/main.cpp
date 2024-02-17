@@ -27,21 +27,6 @@ float
 
 std::array<int, (size_t)WIDTH * (size_t)HEIGHT> cache;
 
-void Draw(bool recalc = false) {
-    for (int x = 0; x < WIDTH; x++) {
-        for (int y = 0; y < HEIGHT; y++) {
-
-            // map the iteration number to a color
-            float hue = fmod(fmod(static_cast<float>(it) / ITER, 1.0f) + tint, 1.0f);
-            Color color = ColorFromHSV(hue * 360, 1.0f, 1.0f);
-
-            DrawPixel(x, y, color);
-        }
-    }
-
-    EndDrawing();
-}
-
 int Mand(const complex& c) {
     int it = 0;
     complex z = 0;
@@ -80,7 +65,10 @@ void Tick(bool update) {
                 fmod(
                     static_cast<float>(cache[y * WIDTH + x]) / 
                     MAX_ITER, 1.0f
-                ) + tint, 1.0f);
+                ) + tint, 
+                1.0f
+            );
+
             Color color = ColorFromHSV(hue * 360, 1.0f, 1.0f);
 
             DrawPixel(x, y, color);
