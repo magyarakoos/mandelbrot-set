@@ -76,8 +76,8 @@ void Tick(bool update) {
         }
     }
 
-    string s = "tint: " + std::to_string(tint) + " ";
-    DrawText(s.c_str(), )
+    std::string s = "tint: " + std::to_string(tint) + " ";
+    DrawText(s.c_str(), 10, 10, 10, WHITE);
 }
 
 bool GetInput() {
@@ -101,6 +101,8 @@ bool GetInput() {
 
         return 0;
     }
+
+    return 0;
 }
 
 int main() {
