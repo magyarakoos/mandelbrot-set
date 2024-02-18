@@ -114,7 +114,9 @@ bool GetInput() {
         }
     }
 
-    if (IsKeyDown())
+    if (IsKeyDown(KEY_UP)) {
+        
+    }
 
     return update;
 }
