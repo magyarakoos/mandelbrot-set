@@ -24,7 +24,7 @@ double
 
 constexpr float 
     TINT_STEP = 0.02f,
-    ZOOM_STEP = 0.99f
+    ZOOM_STEP = 0.02f
 ;
 
 float tint = 0.64f;
@@ -123,7 +123,7 @@ bool GetInput() {
             deltaY = static_cast<float>(GetMouseY()) / HEIGHT
         ;
 
-        real_min *= ZOOM_STEP;
+        real_min *= 1 -ZOOM_STEP;
         img_min *= ZOOM_STEP;
         real_max *= ZOOM_STEP;
         img_max *= ZOOM_STEP;
