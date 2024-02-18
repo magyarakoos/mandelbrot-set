@@ -88,7 +88,7 @@ void Tick(bool update) {
         to_string(real_min, 2) + "  " +
         to_string(real_max, 2) + "  " +
         to_string(img_min,  2) + "  " +
-        to_string(img_max,  2) + " " std::to_string()
+        to_string(img_max,  2) + "  "
     ;
 
     DrawText(s.c_str(), 8, 5, 30, WHITE);
