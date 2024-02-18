@@ -127,6 +127,8 @@ bool GetInput() {
         img_min *= 1 / ZOOM_STEP;
         real_max *= ZOOM_STEP;
         img_max *= ZOOM_STEP;
+
+        update = 1;
     }
 
     return update;
