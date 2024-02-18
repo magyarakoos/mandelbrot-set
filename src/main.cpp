@@ -83,7 +83,9 @@ void Tick(bool update) {
         }
     }
 
-    DrawText(Stringify(tint, 2).c_str(), 8, 5, 30, WHITE);
+    std::string s = Stringify(tint, 2) + " ";
+
+    DrawText(s.c_str(), 8, 5, 30, WHITE);
 }
 
 bool GetInput() {
