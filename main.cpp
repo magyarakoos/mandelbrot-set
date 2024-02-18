@@ -28,7 +28,7 @@ constexpr float
 
 float 
     tint = 0.64f,
-    ZOOM_STEP = 0.04f
+    zoom_step = 0.04f
 ;
 
 std::array<int, (size_t)WIDTH * (size_t)HEIGHT> cache;
@@ -125,12 +125,12 @@ bool GetInput() {
             deltaY = static_cast<float>(GetMouseY()) / HEIGHT
         ;
 
+        real_min += zoom_step * deltaX;
+        img_min += zoom_step * deltaY;
+        real_max -= zoom_step * (1 - deltaX);
+        img_max -= zoom_step * (1 - deltaY);
 
-
-        real_min += ZOOM_STEP * deltaX;
-        img_min += ZOOM_STEP * deltaY;
-        real_max -= ZOOM_STEP * (1 - deltaX);
-        img_max -= ZOOM_STEP * (1 - deltaY);
+        zoom_step *= 0.99f;
 
         update = 1;
     }
