@@ -114,14 +114,14 @@ bool GetInput() {
         }
     }
 
-    if (IsKeyDown(KEY_UP) || IsKeyDown(KEY_DOWN)) {
+    if (IsKeyDown(KEY_UP)) {
 
         float
             deltaX = static_cast<float>(GetMouseX()) / WIDTH,
             deltaY = static_cast<float>(GetMouseY()) / HEIGHT
         ;
 
-        
+        real_max
     }
 
     return update;
