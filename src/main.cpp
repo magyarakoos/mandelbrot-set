@@ -55,7 +55,17 @@ void Calculate() {
 }
 
 char* Stringify(float f, int decimals) {
+    // Convert float to string with specified decimal places
+    std::ostringstream oss;
+    oss << std::fixed << std::setprecision(decimals) << f;
+    std::string result = oss.str();
+
+    char* cstr = new char[result.length() + 1];
     
+    // Copy the content of the string to the C-string
+    std::strcpy(cstr, result.c_str());
+
+    return cstr;
 }
 
 void Tick(bool update) {
