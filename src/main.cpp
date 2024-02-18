@@ -114,8 +114,10 @@ bool GetInput() {
         }
     }
 
-    if (IsKeyDown(KEY_UP)) {
-        
+    if (IsKeyDown(KEY_UP) || IsKeyDown(KEY_DOWN)) {
+
+        float
+            deltaY = 
     }
 
     return update;
