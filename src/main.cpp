@@ -55,7 +55,7 @@ void Calculate() {
     }
 }
 
-std::string ToString(float f, int decimals) {
+std::string to_string(float f, int decimals) {
     std::ostringstream oss;
     oss << std::fixed << std::setprecision(decimals) << f;
     return oss.str();
@@ -84,11 +84,11 @@ void Tick(bool update) {
     }
 
     std::string s = 
-        Stringify(tint,     2) + "  " + 
-        Stringify(real_min, 2) + "  " +
-        Stringify(real_max, 2) + "  " +
-        Stringify(img_min,  2) + "  " +
-        Stringify(img_max,  2)
+        to_string(tint,     2) + "  " + 
+        to_string(real_min, 2) + "  " +
+        to_string(real_max, 2) + "  " +
+        to_string(img_min,  2) + "  " +
+        to_string(img_max,  2) + " " std::to_string()
     ;
 
     DrawText(s.c_str(), 8, 5, 30, WHITE);
