@@ -132,7 +132,7 @@ bool GetInput() {
         real_max -= flip * zoom_step * (1 - deltaX);
         img_max  -= flip * zoom_step * (1 - deltaY);
 
-        zoom_step *= 0.99f;
+        zoom_step *= 1 - 0.01f * (1 / );
 
         update = 1;
     }
