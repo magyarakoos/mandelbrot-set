@@ -117,7 +117,11 @@ bool GetInput() {
     if (IsKeyDown(KEY_UP) || IsKeyDown(KEY_DOWN)) {
 
         float
-            deltaY = 
+            deltaX = GetMouseX() / WIDTH,
+            deltaY = GetMouseY() / HEIGHT
+        ;
+
+        
     }
 
     return update;
