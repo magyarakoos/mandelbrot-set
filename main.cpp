@@ -118,12 +118,14 @@ bool GetInput() {
         }
     }
 
-    if (IsKeyDown(KEY_UP)) {
+    if (IsKeyDown(KEY_UP) != IsKeyDown(KEY_DOWN)) {
 
         float
             deltaX = static_cast<float>(GetMouseX()) / WIDTH,
             deltaY = static_cast<float>(GetMouseY()) / HEIGHT
         ;
+
+        int flip = (IsKeyDown(KEY_D))
 
         real_min += zoom_step * deltaX;
         img_min  += zoom_step * deltaY;
