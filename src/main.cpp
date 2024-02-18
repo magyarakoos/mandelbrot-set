@@ -55,11 +55,9 @@ void Calculate() {
     }
 }
 
-char* Stringify(float f, int decimals) {
-    // Convert float to string with specified decimal places
+std::string Stringify(float f, int decimals) {
     std::ostringstream oss;
     oss << std::fixed << std::setprecision(decimals) << f;
-
     return oss.str();
 }
 
@@ -85,7 +83,7 @@ void Tick(bool update) {
         }
     }
 
-    DrawText(std::to_string(tint).c_str(), 8, 5, 30, WHITE);
+    DrawText(Stringify(tint, 2).c_str(), 8, 5, 30, WHITE);
 }
 
 bool GetInput() {
