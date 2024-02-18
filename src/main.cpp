@@ -2,6 +2,7 @@
 #include <raylib.h>
 #include <assert.h>
 #include <complex>
+#include <iomanip>
 #include <array>
 #include <string>
 
@@ -60,12 +61,7 @@ char* Stringify(float f, int decimals) {
     oss << std::fixed << std::setprecision(decimals) << f;
     std::string result = oss.str();
 
-    char* cstr = new char[result.length() + 1];
-    
-    // Copy the content of the string to the C-string
-    std::strcpy(cstr, result.c_str());
-
-    return cstr;
+    return result.c_str();
 }
 
 void Tick(bool update) {
