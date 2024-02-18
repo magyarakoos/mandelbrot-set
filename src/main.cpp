@@ -10,7 +10,7 @@ using complex = std::complex<double>;
 
 constexpr int
     FPS = 60,
-    MAX_ITER = 200,
+    MAX_ITER = 100,
     WIDTH = 800,
     HEIGHT = 800
 ;
