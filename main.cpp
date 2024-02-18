@@ -146,6 +146,8 @@ int main() {
     SetTargetFPS(FPS);
     InitWindow(WIDTH, HEIGHT, "Mandelbrot Set");
 
+    unsigned frames_elapsed = 0;
+
     Tick(1);
 
     while (!WindowShouldClose()) {
@@ -153,8 +155,10 @@ int main() {
 
         bool update = GetInput();
 
-        Tick(update);
+        Tick(frames_elapsed % 4 == 0 ? update : 0);
 
         EndDrawing();
+
+        frames_elapsed++;
     }
 }
