@@ -13,7 +13,7 @@ constexpr int
     MAX_ITER = 100,
     WIDTH = 800,
     HEIGHT = 800,
-    ZOOM_SPEED = 10
+    ZOOM_SPEED = 2
 ;
 
 double
@@ -130,10 +130,10 @@ bool GetInput() {
 
         real_min += flip * zoom_step * deltaX * ZOOM_SPEED;
         img_min  += flip * zoom_step * deltaY * ZOOM_SPEED;
-        real_max -= flip * zoom_step * (1 - deltaX);
-        img_max  -= flip * zoom_step * (1 - deltaY);
+        real_max -= flip * zoom_step * (1 - deltaX) * ZOOM_SPEED;
+        img_max  -= flip * zoom_step * (1 - deltaY) * ZOOM_SPEED;
 
-        zoom_step *= 0.99f;
+        zoom_step *= 1 - 0.01f * ZOOM_SPEED;
 
         update = 1;
     }
