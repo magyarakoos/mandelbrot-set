@@ -7,7 +7,6 @@ g++ -o main main.cpp \
     -Wall \
     -Wextra \
     -Werror \
-    
     -lraylib
 
 ./main
