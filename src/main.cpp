@@ -119,9 +119,9 @@ bool GetInput() {
     if (IsKeyDown(KEY_UP)) {
 
         // float
-        //     deltaX = static_cast<float>(GetMouseX()) / WIDTH,
-        //     deltaY = static_cast<float>(GetMouseY()) / HEIGHT
-        // ;
+             deltaX = static_cast<float>(GetMouseX()) / WIDTH,
+             deltaY = static_cast<float>(GetMouseY()) / HEIGHT
+        ;
 
         real_min *= 1 - ZOOM_STEP;
         img_min *= 1 - ZOOM_STEP;
