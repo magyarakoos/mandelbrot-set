@@ -96,14 +96,14 @@ void Tick(bool update) {
 
 bool GetInput() {
 
+    bool update = 0;
+
     if (IsKeyDown(KEY_RIGHT)) {
 
         tint += TINT_STEP;
         if (tint > 1) {
             tint = 0;
         }
-
-        return 0;
     }
 
     if (IsKeyDown(KEY_LEFT)) {
@@ -112,13 +112,11 @@ bool GetInput() {
         if (tint < 0) {
             tint = 1;
         }
-
-        return 0;
     }
 
-    
+    if (IsKeyDown())
 
-    return 0;
+    return update;
 }
 
 int main() {
