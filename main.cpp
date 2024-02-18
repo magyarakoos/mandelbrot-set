@@ -12,9 +12,10 @@ constexpr int
     FPS = 60,
     MAX_ITER = 100,
     WIDTH = 800,
-    HEIGHT = 800,
-    ZOOM_SPEED = 10
+    HEIGHT = 800
 ;
+   
+int ZOOM_SPEED = 10;
 
 double
     real_min = -2,
