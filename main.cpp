@@ -155,7 +155,7 @@ int main() {
 
         bool update = GetInput();
 
-        Tick(frames_elapsed % 4 == 0 ? update : 0);
+        Tick(frames_elapsed % 10 == 0 ? update : 0);
 
         EndDrawing();
 
