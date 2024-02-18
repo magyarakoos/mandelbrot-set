@@ -134,7 +134,8 @@ bool GetInput() {
 
         // the magic numbers were 0.04f and 0.01f,
         // and when the initial zoom step value gets changed,
-        // the 
+        // they have to stay proportional to eachother
+        // (the bigger the initial zoom step, the faster you zoom in)
         zoom_step *= 1 - 0.01f * (zoom_step / 0.04f);
 
         update = 1;
