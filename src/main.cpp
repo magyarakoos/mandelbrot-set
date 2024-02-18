@@ -86,7 +86,7 @@ void Tick(bool update) {
         to_string(real_min, 2) + "  " +
         to_string(real_max, 2) + "  " +
         to_string(img_min,  2) + "  " +
-        to_string(img_max,  2) + "  "
+        to_string(img_max,  2)
     ;
 
     DrawText(s.c_str(), 8, 5, 30, WHITE);
@@ -119,7 +119,8 @@ bool GetInput() {
             deltaY = static_cast<float>(GetMouseY()) / HEIGHT
         ;
 
-        real_max
+        real_min *= 1 / 0.9f;
+        
     }
 
     return update;
