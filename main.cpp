@@ -125,12 +125,12 @@ bool GetInput() {
             deltaY = static_cast<float>(GetMouseY()) / HEIGHT
         ;
 
-        int flip = (IsKeyDown(KEY_D))
+        int flip = (IsKeyDown(KEY_UP) ? 1 : -1);
 
-        real_min += zoom_step * deltaX;
-        img_min  += zoom_step * deltaY;
-        real_max -= zoom_step * (1 - deltaX);
-        img_max  -= zoom_step * (1 - deltaY);
+        real_min += flip * zoom_step * deltaX;
+        img_min  += flip * zoom_step * deltaY;
+        real_max -= flip * zoom_step * (1 - deltaX);
+        img_max  -= flip * zoom_step * (1 - deltaY);
 
         zoom_step *= 0.99f;
 
