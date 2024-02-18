@@ -126,7 +126,7 @@ bool GetInput() {
         real_min *= 1 - ZOOM_STEP * deltaX;
         img_min *= 1 - ZOOM_STEP * deltaY;
         real_max *= 1 - ZOOM_STEP * (1 - deltaX);
-        img_max *= 1 - ZOOM_STEP * deltaY;
+        img_max *= 1 - ZOOM_STEP * (1 - deltaY);
 
         update = 1;
     }
