@@ -128,8 +128,8 @@ bool GetInput() {
 
         int flip = (IsKeyDown(KEY_UP) ? 1 : -1);
 
-        real_min += flip * zoom_step * deltaX;
-        img_min  += flip * zoom_step * deltaY;
+        real_min += flip * zoom_step * deltaX * ZOOM_SPEED;
+        img_min  += flip * zoom_step * deltaY * ZOOM_SPEED;
         real_max -= flip * zoom_step * (1 - deltaX);
         img_max  -= flip * zoom_step * (1 - deltaY);
 
