@@ -28,7 +28,7 @@ constexpr float
 
 float 
     tint = 0.64f,
-    zoom_step = 0.1f
+    zoom_step = 0.04f
 ;
 
 std::array<int, (size_t)WIDTH * (size_t)HEIGHT> cache;
@@ -132,11 +132,7 @@ bool GetInput() {
         real_max -= flip * zoom_step * (1 - deltaX);
         img_max  -= flip * zoom_step * (1 - deltaY);
 
-        // the magic numbers were 0.04f and 0.01f,
-        // and when the initial zoom step value gets changed,
-        // they have to stay proportional to eachother
-        // (the bigger the initial zoom step, the faster you zoom in)
-        zoom_step *= 0.99f - 0.01f * (zoom_step / 0.04f);
+        zoom_step *= 0.99f;
 
         update = 1;
     }
