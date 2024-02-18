@@ -84,10 +84,10 @@ void Tick(bool update) {
     }
 
     std::string s = 
-        Stringify(tint,     2) + " " + 
-        Stringify(real_min, 2) + " " +
-        Stringify(real_max, 2) + " " +
-        Stringify(img_min,  2) + " " +
+        Stringify(tint,     2) + "  " + 
+        Stringify(real_min, 2) + "  " +
+        Stringify(real_max, 2) + "  " +
+        Stringify(img_min,  2) + "  " +
         Stringify(img_max,  2)
     ;
 
