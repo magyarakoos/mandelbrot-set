@@ -59,9 +59,8 @@ char* Stringify(float f, int decimals) {
     // Convert float to string with specified decimal places
     std::ostringstream oss;
     oss << std::fixed << std::setprecision(decimals) << f;
-    std::string result = oss.str();
 
-    return result.c_str();
+    return oss.str();
 }
 
 void Tick(bool update) {
