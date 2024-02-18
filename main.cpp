@@ -163,7 +163,7 @@ int main() {
         EndDrawing();
 
         if (frames_elapsed % zoom_speed == 0) {
-            zoom_speed += 10;
+            zoom_speed += 50;
         }
 
         frames_elapsed++;
