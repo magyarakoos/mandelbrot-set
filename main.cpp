@@ -12,10 +12,9 @@ constexpr int
     FPS = 60,
     MAX_ITER = 100,
     WIDTH = 800,
-    HEIGHT = 800
+    HEIGHT = 800,
+    ZOOM_SPEED = 10
 ;
-   
-int zoom_speed = 50;
 
 double
     real_min = -2,
@@ -157,8 +156,8 @@ int main() {
 
         bool update = GetInput();
 
-        // only recalculate every zoom_speed'th frame
-        Tick(frames_elapsed % zoom_speed ? 0 : update);
+        // only recalculate every ZOOM_SPEED'th frame
+        Tick(frames_elapsed % ZOOM_SPEED ? 0 : update);
 
         EndDrawing();
 
