@@ -156,10 +156,12 @@ int main() {
 
         bool update = GetInput();
 
-        // only recalculate every `ZOOM_SPEED'th
+        // only recalculate every ZOOM_SPEED'th frame
         Tick(frames_elapsed % ZOOM_SPEED ? 0 : update);
 
         EndDrawing();
+
+        if (frames_elapsed % ZOOM_SPEE)
 
         frames_elapsed++;
     }
