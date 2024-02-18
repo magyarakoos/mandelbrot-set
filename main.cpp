@@ -12,7 +12,8 @@ constexpr int
     FPS = 60,
     MAX_ITER = 100,
     WIDTH = 800,
-    HEIGHT = 800
+    HEIGHT = 800,
+    ZOOM_SPEED = 10
 ;
 
 double
@@ -155,7 +156,8 @@ int main() {
 
         bool update = GetInput();
 
-        Tick(frames_elapsed % 10 == 0 ? update : 0);
+        // only recalculate every `ZOOM_SPEED'th
+        Tick(frames_elapsed % ZOOM_SPEED ? 0 : update);
 
         EndDrawing();
 
