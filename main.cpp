@@ -132,7 +132,8 @@ bool GetInput() {
         real_max -= flip * zoom_step * (1 - deltaX);
         img_max  -= flip * zoom_step * (1 - deltaY);
 
-        zoom_step *= 1 - 0.01f * (1 / );
+        // the magic numbers initialy were 0.04f and 0.01f,
+        zoom_step *= 1 - 0.01f * (zoom_step / 0.04f);
 
         update = 1;
     }
