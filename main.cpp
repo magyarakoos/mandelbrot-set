@@ -8,7 +8,7 @@
 
 using complex = std::complex<double>;
 
-constexpr int
+const int
     FPS = 60,
     MAX_ITER = 100,
     WIDTH = 800,
@@ -16,7 +16,7 @@ constexpr int
     ZOOM_SPEED = 10
 ;
 
-constexpr float 
+const float 
     TINT_STEP = 0.02f
 ;
 
