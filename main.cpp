@@ -161,7 +161,9 @@ int main() {
 
         EndDrawing();
 
-        if (frames_elapsed % ZOOM_SPEE)
+        if (frames_elapsed % ZOOM_SPEED == 0) {
+            ZOOM_SPEED++;
+        }
 
         frames_elapsed++;
     }
