@@ -13,7 +13,7 @@ constexpr int
     MAX_ITER = 100,
     WIDTH = 800,
     HEIGHT = 800,
-    ZOOM_SPEED = 2
+    ZOOM_SPEED = 10
 ;
 
 double
@@ -147,8 +147,6 @@ int main() {
     SetTargetFPS(FPS);
     InitWindow(WIDTH, HEIGHT, "Mandelbrot Set");
 
-    unsigned frames_elapsed = 0;
-
     Tick(1);
 
     while (!WindowShouldClose()) {
@@ -156,11 +154,8 @@ int main() {
 
         bool update = GetInput();
 
-        // only recalculate every ZOOM_SPEED'th frame
-        Tick(frames_elapsed % ZOOM_SPEED ? 0 : update);
+        Tick(update);
 
         EndDrawing();
-
-        frames_elapsed++;
     }
 }
