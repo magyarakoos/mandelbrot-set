@@ -83,7 +83,13 @@ void Tick(bool update) {
         }
     }
 
-    std::string s = Stringify(tint, 2) + " ";
+    std::string s = 
+        Stringify(tint, 2) + " " + 
+        Stringify(real_min, 2) + " " +
+        Stringify(real_max, 2) + " " +
+        Stringify(real_min, 2) + " " +
+        Stringify(real_min, 2) + " " +
+    ;
 
     DrawText(s.c_str(), 8, 5, 30, WHITE);
 }
