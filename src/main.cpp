@@ -22,7 +22,11 @@ double
     img_max = 2
 ;
 
-constexpr float TINT_STEP = 0.02f;
+constexpr float 
+    TINT_STEP = 0.02f,
+    
+
+
 float tint = 0.64f;
 
 std::array<int, (size_t)WIDTH * (size_t)HEIGHT> cache;
@@ -114,10 +118,10 @@ bool GetInput() {
 
     if (IsKeyDown(KEY_UP)) {
 
-        float
-            deltaX = static_cast<float>(GetMouseX()) / WIDTH,
-            deltaY = static_cast<float>(GetMouseY()) / HEIGHT
-        ;
+        // float
+        //     deltaX = static_cast<float>(GetMouseX()) / WIDTH,
+        //     deltaY = static_cast<float>(GetMouseY()) / HEIGHT
+        // ;
 
         real_min *= 1 / 0.9f;
         img_min *= 1 / 0.9f;
