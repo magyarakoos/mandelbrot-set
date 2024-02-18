@@ -54,6 +54,10 @@ void Calculate() {
     }
 }
 
+char* Stringify(float f, int decimals) {
+    
+}
+
 void Tick(bool update) {
     if (update) {
         Calculate();
