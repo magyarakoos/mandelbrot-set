@@ -22,10 +22,8 @@ double
     img_max = 2
 ;
 
-float
-    TINT_STEP = 0.02f,
-    tint = 0.64f
-;
+constexpr float TINT_STEP = 0.02f;
+float tint = 0.64f;
 
 std::array<int, (size_t)WIDTH * (size_t)HEIGHT> cache;
 
