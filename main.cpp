@@ -16,15 +16,15 @@ constexpr int
     ZOOM_SPEED = 10
 ;
 
+constexpr float 
+    TINT_STEP = 0.02f
+;
+
 double
     real_min = -2,
     real_max = 2,
     img_min = -2,
     img_max = 2
-;
-
-constexpr float 
-    TINT_STEP = 0.02f
 ;
 
 float 
