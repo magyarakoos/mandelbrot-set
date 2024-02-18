@@ -55,7 +55,7 @@ void Calculate() {
     }
 }
 
-std::string Stringify(float f, int decimals) {
+std::string ToString(float f, int decimals) {
     std::ostringstream oss;
     oss << std::fixed << std::setprecision(decimals) << f;
     return oss.str();
