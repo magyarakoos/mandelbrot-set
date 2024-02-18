@@ -23,11 +23,13 @@ double
 ;
 
 constexpr float 
-    TINT_STEP = 0.02f,
-    ZOOM_STEP = 0.02f
+    TINT_STEP = 0.02f
 ;
 
-float tint = 0.64f;
+float 
+    tint = 0.64f,
+    ZOOM_STEP = 0.04f
+;
 
 std::array<int, (size_t)WIDTH * (size_t)HEIGHT> cache;
 
@@ -122,6 +124,8 @@ bool GetInput() {
             deltaX = static_cast<float>(GetMouseX()) / WIDTH,
             deltaY = static_cast<float>(GetMouseY()) / HEIGHT
         ;
+
+
 
         real_min += ZOOM_STEP * deltaX;
         img_min += ZOOM_STEP * deltaY;
