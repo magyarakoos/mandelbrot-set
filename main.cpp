@@ -28,7 +28,7 @@ constexpr float
 
 float 
     tint = 0.64f,
-    zoom_step = 0.08f
+    zoom_step = 0.06f
 ;
 
 std::array<int, (size_t)WIDTH * (size_t)HEIGHT> cache;
