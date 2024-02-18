@@ -120,7 +120,9 @@ bool GetInput() {
         ;
 
         real_min *= 1 / 0.9f;
-        
+        img_min *= 1 / 0.9f;
+        real_max *= 0.9f;
+        img_max *= 0.9f;
     }
 
     return update;
