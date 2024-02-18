@@ -136,7 +136,7 @@ bool GetInput() {
         // and when the initial zoom step value gets changed,
         // they have to stay proportional to eachother
         // (the bigger the initial zoom step, the faster you zoom in)
-        zoom_step *= 1 - 0.01f * (zoom_step / 0.04f);
+        zoom_step *= 0.99f - 0.01f * (zoom_step / 0.04f);
 
         update = 1;
     }
